@@ -33,15 +33,10 @@ let translateCard;
              <img src ={props.photo} className={'cardImg'} alt="cardImg"></img>
             <div className="card-question">Question: {props.question}</div>
             {translateCard}
-          
-
-
 
         </div>
     
 )}
-
-      
 
 export default Card;
 

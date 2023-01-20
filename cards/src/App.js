@@ -3,14 +3,14 @@ import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 import Read from './components/Read-Change-Delete/Read-Change-Delete';
-import Translate from './components/Translate/Translate';
+//import Translate from './components/Translate/Translate';
 import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
 import Word from './components/Word/Word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
 import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
 import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
-import TransButton from './components/Transbutton/TransButton';
+//import TransButton from './components/Transbutton/Transbutton';
 import Header from './components/Header/Header.jsx';
 import Main from './components/Mainpage/Main.jsx';
 import Know from './components/Knowcards/Know';
