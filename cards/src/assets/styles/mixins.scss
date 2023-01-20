@@ -1,0 +1,26 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   };
+
+@mixin font-style {
+    font-family: "Arial";
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+@mixin font-style-regular-text {
+    font-family: "Arial";
+    font-size: 1em;
+    font-weight: regular;
+}
+
+@mixin font-style-button-text {
+    font-family: "Arial";
+    font-size: 1.2em;
+    font-weight: regular;
+}
+
+

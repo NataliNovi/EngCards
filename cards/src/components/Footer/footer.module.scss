@@ -1,0 +1,11 @@
+.footer {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background: gray;
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    height: 80px;
+}

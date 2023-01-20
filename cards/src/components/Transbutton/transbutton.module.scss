@@ -1,0 +1,9 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
+.transButton {
+    margin-top: 10px;
+    background: var(--button-background-color);
+    @include font-style-button-text;
+    border: var(--border-button);
+}

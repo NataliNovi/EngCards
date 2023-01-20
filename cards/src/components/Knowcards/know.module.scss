@@ -1,0 +1,15 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
+.cardKnow {
+    background: var(--knowCard-background);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: var(--resultsCards-font-size);
+    width: var(--resultsCards-width);
+    height: var(--resultsCards-height);
+    color: var(--text-color);
+    @include flex-column;
+    @include font-style;
+    
+}

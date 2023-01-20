@@ -1,0 +1,43 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
+
+.cardsContainer {
+display: grid;
+grid-template-columns: 25% 25% 25% 25%;
+
+}
+
+.cardImg  {
+    height: 150px;
+    min-width: auto;
+    max-width: 90%;
+
+}
+
+.card {
+    color: var(--text-color);
+    border: double 2px gray;
+    margin-top: 30px;
+    width: 20vw;
+    height: 16vw;
+    text-align: center;
+    @include font-style-regular-text;
+    padding-bottom: 10px;
+
+}
+
+
+.cardTranslation {
+    font-weight: 600;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: rgb(235, 236, 183);
+  }
+  .box.active {
+    background: rgb(215, 237, 215);
+  }

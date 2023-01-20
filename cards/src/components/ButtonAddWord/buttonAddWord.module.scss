@@ -1,0 +1,21 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
+.buttonAddWordContainer {
+    width: 100vw;
+    @include flex-column;
+}
+
+
+.buttonAddWord {
+   
+    color: var(--text-color);
+    background: var(--button-background-color);
+    border: var(--border-button);
+    border-radius: var(--border-radius);
+    margin-top: 30px;
+    height: 3vw;
+    width: 50vw;
+    @include font-style-button-text;
+
+}

@@ -1,0 +1,44 @@
+@import './assets/styles/mixins.scss';
+@import './assets/styles/variables.scss';
+
+.App {
+  width: 100vw;
+  padding: 6px;
+
+}
+
+.wordsListContainer {
+  margin-top: 50px;
+
+}
+
+.readListContainer {
+  margin-top: 50px;
+
+}
+
+.choice {
+  margin-top: 30px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+}
+
+.wordsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; 
+  margin-top: 50px;
+}
+
+.resultsContainer {
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin-top: 150px;
+}
+
