@@ -37,6 +37,16 @@ export const cardsArr = [
     theme: "Colors",
     sample: "black coat",
     },
+
+    {title: "Pink",
+    photo: "https://i.pinimg.com/736x/d0/a3/eb/d0a3eb4d5569aa745d9be6e3842d1444.jpg",
+    mean: "color",
+    question: "What's her favorite color?",
+    transcript: "|pɪŋk| ",
+    translate: "розовый",
+    theme: "Colors",
+    sample: "pink car",
+    },
     
     ]
 

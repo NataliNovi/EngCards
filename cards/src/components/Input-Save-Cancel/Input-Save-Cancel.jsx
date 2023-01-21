@@ -5,11 +5,13 @@ function Input (props) {
         
         <div className={styles.inputTable}>
            
-            <input className={styles.id}></input>
-            <input className={styles.english}></input>
-            <input className={styles.transcription}></input>
-            <input className={styles.russian}></input>
-            <div className={styles.tableButtons}><button className={styles.listButton}>Save</button><button className={styles.listButton}>Cancel</button></div>
+            <input className={styles.id} placeholder='id'></input>
+            <input className={styles.english} placeholder='english word'></input>
+            <input className={styles.transcription} placeholder='transcript'></input>
+            <input className={styles.russian} placeholder='translate'></input>
+            <div className={styles.tableButtons}><button className={styles.listButton} onClick={() => props.handleSaveWordChange()}>Save</button><button className={styles.listButton} onClick={() => props.handleCancelWordChange()}>Cancel</button></div>
+
+           
             </div>
          
     );

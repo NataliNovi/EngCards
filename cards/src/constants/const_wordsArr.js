@@ -33,6 +33,15 @@ export const wordsArr = [
     theme: "Colors",
     sample: "black coat",
     },
+
+    {title: "Pink",
+    photo: "https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/pastel-pink-solid-color-pantone-prism-pink-14-2311-petite-patterns.jpg",
+    mean: "color",
+    transcript: "|pɪŋk| ",
+    translate: "розовый",
+    theme: "Colors",
+    sample: "pink car",
+    },
     
     
     ]

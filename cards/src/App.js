@@ -1,4 +1,5 @@
 import styles from './App.module.scss';
+import React, {useState} from 'react';
 import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
@@ -38,12 +39,11 @@ import { wordsListArr } from './constants/wordsList';
 
 .catch(error => console.log(error))*/
 
-const wordsList = wordsListArr;
-const wordDescribe = wordsArr;
-const cardDescribe = cardsArr;
 
 
-  const isInputField = true;
+
+  /*через условный рендеринг*/
+  /*const isInputField = false;
   let actionItem;
 
   if (isInputField) { 
@@ -51,28 +51,52 @@ const cardDescribe = cardsArr;
   }  else {
     actionItem = wordsListArr.map((item) =>
     (<Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
-  ))}
+  ))}*/
 
 
 function App() {
+
+const wordsList = wordsListArr;
+const wordDescribe = wordsArr;
+const cardDescribe = cardsArr;
+
+  const[isInputShow, setIsInputShow] = useState(false);
+
+  const handleCorrectWord = () => {
+    setIsInputShow(!isInputShow)
+  }
+
+  const handleCancelWordChange = () => {
+    setIsInputShow(!isInputShow)
+  }
+
+  const handleSaveWordChange = () => {
+    setIsInputShow(!isInputShow)
+  }
 
   return (
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
-
-
-  <div className={styles.wordsListContainer}>
-        {wordsList.map((item)=>
-          <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
-        )}
-      </div>
       
 
-  <div className={styles.choice}>
-      {actionItem}
-  </div>
 
+
+
+  {isInputShow
+            ?  <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
+            :  <div className={styles.table}>
+            {wordsList.map((item)=>
+                    <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} handleCorrectWord = {handleCorrectWord}/>
+                  )}
+            </div>
+            }
+
+
+      {/* {actionItem} это к условному рендеру*/}
+
+
+ 
 
   <div className={styles.cardsContainer}>
   {cardDescribe.map((card)=>
@@ -107,8 +131,12 @@ function App() {
 }
 
 export default App;
-/**/
 
+  /*<div className={styles.wordsListContainer}>
+        {wordsList.map((item)=>
+          <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
+        )}
+      </div>*/
 
 
 /*<div className={styles.cardsContainer}>

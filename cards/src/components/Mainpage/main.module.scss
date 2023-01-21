@@ -3,16 +3,22 @@
 }
 
 .mainSlogan {
-    font-size: 6rem;
+    height: 15%;
+    width: 40%;
+    font-size: 4vw;
     position: absolute;
     top: 38%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 30%;
     background-color: var(--custom-yellow);
     border: double;
     padding: 4px 12px 4px 12px;
     border-radius: 12px;
+    text-align: center;
+    display: flex;
+   align-items: center;
+   justify-content: center;
 }
+
 
 .main {
 position: relative;

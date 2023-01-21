@@ -10,9 +10,11 @@ function Table (props) {
             <div className={styles.english}>{props.english}</div>
             <div className={styles.transcription}>{props.transcription}</div>
             <div className={styles.russian}>{props.russian}</div>
-            <div className={styles.tableButtons}><button className={styles.listButton}>Save</button><button className={styles.listButton}>Correct</button><button className={styles.listButton}>Delete</button></div>
+            <div className={styles.tableButtons}><button className={styles.listButton}onClick={() => props.handleCorrectWord()} >Correct</button><button className={styles.listButton}>Delete</button></div>
             </div>
          
     );
 }
 export default Table;
+
+/* должны отображаться либо поля для чтения и с кнопками редактировать/удалить, либо поля ввода с кнопками сохранить/отмена. */
