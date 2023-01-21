@@ -1,0 +1,20 @@
+@import '../../assets/styles/mixins.scss';
+@import '../../assets/styles/variables.scss';
+
+.hideAnswer {
+  
+      margin-top: 30px;
+      background: var(--button-background-color);
+      @include font-style-button-text;
+      border: var(--border-button);
+      width:60%;
+  }
+
+  .cardTitle {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+
+
+

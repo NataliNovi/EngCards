@@ -54,19 +54,6 @@ const cardDescribe = cardsArr;
   ))}
 
 
-  /*const isTranslateButtonPressed = false;
-  let translateCard;
-
-if (isTranslateButtonPressed) { 
-  translateCard = <TransButton/>; 
-}  else {
-  translateCard = cardDescribe.map((card)=>
-   ( <Translate key={card.transcript} photo={card.photo} mean={card.mean} question={card.question} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} translate={card.translate}/>
-   ))}*/
-
-
-
-
 function App() {
 
   return (

@@ -1,25 +1,39 @@
+import { useState } from 'react';
 import styles from './word.module.scss';
+import WordTransButton from '../WordTransButton/WordTransButton';
+import WordTranslate from '../WordTranslate/WordTranslate';
 
 function Word (props) {
-    const {photo, title, mean, transcript, translate, theme, sample, isSelected} = props;
-    let classWord = isSelected ? "selected":"";
+    const {photo, title, transcript, translate} = props;
+    const [isTranslateWord, setIsTranslateWord] = useState(false);
 
+    const handleShowWordTranslate = () => {
+        setIsTranslateWord(!isTranslateWord)
+    }
 
-    //className={`${class} ${isSelected && newClass}`}
-
+    const handleHideWordTranslate = () => {
+        setIsTranslateWord(!isTranslateWord)
+    }
 
     return (
-        <div className={`${styles.word} ${isSelected && classWord}`}>
+        <div className={styles.word}>
 
             <img src ={photo} className={styles.wordImg} alt='wordPicture'></img>
             <div className={styles.wordTitle}>{title}</div>
-            <div className={styles.wordMeaning}>Meaning: {mean}</div>
-            <div className={styles.wordTranscription}>Transcription: {transcript}</div>
-            <div className="word-translation">Translate: {translate}</div>
-            <div className="word-theme">Theme: {theme}</div>
-            <div className="word-sample">Sample: {sample}</div>
+           
+
+            {isTranslateWord
+            ? <WordTranslate translate = {translate} transcript={transcript} handleHideWordTranslate={handleHideWordTranslate}/>
+            : <WordTransButton handleShowWordTranslate = {handleShowWordTranslate}/>
+            }
 
         </div>
     );
 }
 export default Word;
+
+/* <div className={styles.wordMeaning}>Meaning: {mean}</div>
+            <div className={styles.wordTranscription}>Transcription: {transcript}</div>
+            <div className="word-translation">Translate: {translate}</div>
+            <div className="word-theme">Theme: {theme}</div>
+            <div className="word-sample">Sample: {sample}</div>*/
