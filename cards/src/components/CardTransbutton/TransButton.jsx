@@ -2,7 +2,7 @@ import styles from './transbutton.module.scss';
 //import React, {useState} from 'react';
 
 function TransButton (props) {
-    console.log(props)
+    //console.log(props)
    
     return (
         

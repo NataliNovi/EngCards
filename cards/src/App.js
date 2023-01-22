@@ -56,8 +56,34 @@ import { wordsListArr } from './constants/wordsList';
 
 function App() {
 
+//это к таблице со словами
 const wordsList = wordsListArr;
+
+const [words, setWords] = useState(wordsList);
+
+const handleDeleteWord = (id) => {
+  words.forEach(el => {
+
+    if(el.isActive) {
+      el.isActive=false;
+    }
+   
+    if(el.id === id) {
+      el.isActive = true;
+    }
+    setWords([...words])
+
+    if(el.isActive===true) {
+      console.log(el.index)
+      wordsList.splice(`${el.index}`, 1)
+    }
+
+  })}
+
+
+//слова
 const wordDescribe = wordsArr;
+//карточки
 const cardDescribe = cardsArr;
 
   const[isInputShow, setIsInputShow] = useState(false);
@@ -78,21 +104,16 @@ const cardDescribe = cardsArr;
     <div className={styles.App}>
       <Header></Header>
       <Main></Main>
-      
-
-
-
+    
 
   {isInputShow
-            ?  <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
+            ? <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
             :  <div className={styles.table}>
             {wordsList.map((item)=>
-                    <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} handleCorrectWord = {handleCorrectWord}/>
+                    <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
                   )}
             </div>
             }
-
-
       {/* {actionItem} это к условному рендеру*/}
 
 

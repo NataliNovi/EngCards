@@ -6,7 +6,8 @@ export const wordsArr = [
     translate: "красный",
     theme: "Colors",
     sample: "red dress",
-    isSelected: true,
+    isActive: false,
+
     },
     {title: "Blue",
     photo: "https://miro.medium.com/max/1280/0*xCXUvGbrpndOWTw5.jpg",
@@ -15,6 +16,7 @@ export const wordsArr = [
     translate: "синий",
     theme: "Colors",
     sample: "blue hat",
+    isActive: false
     },
     {title: "Yellow",
     photo: "https://funart.pro/uploads/posts/2021-04/1618493424_5-funart_pro-p-oboi-fon-zheltii-tsvet-6.png",
@@ -23,6 +25,7 @@ export const wordsArr = [
     translate: "жёлтый",
     theme: "Colors",
     sample: "yellow shirt",
+    isActive: false
     },
 
     {title: "Black",
@@ -32,6 +35,7 @@ export const wordsArr = [
     translate: "чёрный",
     theme: "Colors",
     sample: "black coat",
+    isActive: false
     },
 
     {title: "Pink",
@@ -41,6 +45,7 @@ export const wordsArr = [
     translate: "розовый",
     theme: "Colors",
     sample: "pink car",
+    isActive: false
     },
     
     
