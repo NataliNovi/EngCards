@@ -74,7 +74,7 @@ const handleDeleteWord = (id) => {
     setWords([...words])
 
     if(el.isActive===true) {
-      console.log(el.index)
+      console.log('удалили элемент с индексом ' + el.index)
       wordsList.splice(`${el.index}`, 1)
     }
 
