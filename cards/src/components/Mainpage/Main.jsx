@@ -1,5 +1,5 @@
 import styles from './main.module.scss';
-import photo from '/Users/nn/Desktop/Frontend/React/engProject/cards/src/assets/photo/photo.webp';
+import photo from '../../assets/photo/photo.webp';
 function Main () {
     return (
         <div className={styles.main}>
