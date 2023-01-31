@@ -101,7 +101,8 @@ const handleHideWordTranslate = () => {
 const onPrevClick = () => {
   let prevIndex = currentIndex-1;
   if (prevIndex===-1) {
-    return "FINISH";
+    prevIndex = wordDescribe.length;
+    //return "FINISH";
   }
   setCurrentIndex(prevIndex)
 }
