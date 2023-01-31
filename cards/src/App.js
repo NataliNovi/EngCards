@@ -100,8 +100,8 @@ const handleHideWordTranslate = () => {
 
 const onPrevClick = () => {
   let prevIndex = currentIndex-1;
-  if (prevIndex===-1) {
-    prevIndex = wordDescribe.length;
+  if (currentIndex===0) {
+    prevIndex = wordDescribe.length-1;
     //return "FINISH";
   }
   setCurrentIndex(prevIndex)
@@ -111,6 +111,7 @@ const onNextClick = () => {
   let nextIndex = currentIndex+1;
   if (nextIndex===wordDescribe.length) {
     nextIndex = 0;
+     //return "FINISH";
   }
   setCurrentIndex(nextIndex)
 }
@@ -173,8 +174,8 @@ const cardDescribe = cardsArr;
     }  */}
 
     {isTranslateNewWord
-    ? <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.translate}</span><br></br>
-     <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translate</button></div> 
+    ? <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.translate} </span><br></br> <img className={styles.imgWord} src = {wordCard.photo} alt ="print" />
+     <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translation</button></div> 
     : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.title}</span><br></br>
   <button onClick={handleWordTranslate} className={styles.buttonWordTranslate}>Translate</button>
   </div>}

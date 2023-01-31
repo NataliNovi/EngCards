@@ -39,7 +39,7 @@ export const wordsArr = [
     },
 
     {title: "White",
-    photo: "",
+    photo: "https://proza.ru/pics/2015/12/19/109.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Белый",
@@ -49,7 +49,7 @@ export const wordsArr = [
     },
 
     {title: "Orange",
-    photo: "",
+    photo: "https://htmlcolorcodes.com/assets/images/colors/neon-orange-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Оранжевый",
@@ -58,7 +58,7 @@ export const wordsArr = [
     isActive: false
     },
     {title: "Green",
-    photo: "",
+    photo: "https://pimmedia.egger.com/l/decor/U600_9/s/Detail/f/881x513/8812251283486",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Зелёный",
@@ -67,7 +67,7 @@ export const wordsArr = [
     isActive: false
     },
     {title: "Gray",
-    photo: "",
+    photo: "https://pimmedia.egger.com/l/decor/U732_PG/s/Detail/f/881x513/8803437379614",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Серый",
@@ -76,7 +76,7 @@ export const wordsArr = [
     isActive: false
     },
     {title: "Golden",
-    photo: "",
+    photo: "https://static.vecteezy.com/system/resources/thumbnails/009/827/838/small/wave-golden-abstract-background-illustration-free-vector.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Золотой",
@@ -86,7 +86,7 @@ export const wordsArr = [
     },
 
     {title: "Silver",
-    photo: "",
+    photo: "https://www.zastavki.com/pictures/originals/2015/Backgrounds_Silver_background_with_rays_102732_.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Серебристый",
@@ -94,8 +94,9 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false
     },
+
     {title: "Ivory",
-    photo: "",
+    photo: "https://www.color-hex.com/palettes/26697.png",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Слоновая кость",
@@ -104,7 +105,7 @@ export const wordsArr = [
     isActive: false
     },
     {title: "Brown",
-    photo: "",
+    photo: "https://htmlcolorcodes.com/assets/images/colors/saddle-brown-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "",
     translate: "Коричневый",
@@ -113,7 +114,7 @@ export const wordsArr = [
     isActive: false
     },
     {title: "Turquoise",
-    photo: "",
+    photo: "https://htmlcolorcodes.com/assets/images/colors/turquoise-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "",
     translate: "Бирюзовый",
