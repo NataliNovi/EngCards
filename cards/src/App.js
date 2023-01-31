@@ -3,11 +3,11 @@ import React, {useState} from 'react';
 import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
-import Read from './components/Read-Change-Delete/Read-Change-Delete';
+//import Read from './components/Read-Change-Delete/Read-Change-Delete';
 //import Translate from './components/Translate/Translate';
 import Card from './components/Card/Card.jsx';
 import {cardsArr} from './constants/const_cardsArr';
-import Word from './components/Word/Word.jsx';
+//import Word from './components/Word/Word.jsx';
 import {wordsArr} from './constants/const_wordsArr';
 import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
 import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
@@ -83,6 +83,40 @@ const handleDeleteWord = (id) => {
 
 //слова
 const wordDescribe = wordsArr;
+const[currentIndex, setCurrentIndex]= useState(0);
+let wordCard = wordDescribe[currentIndex];
+//console.log(wordCard)
+
+const [isTranslateNewWord, setIsTranslateNewWord] = React.useState(false);
+
+
+const handleWordTranslate = () => {
+  setIsTranslateNewWord(!isTranslateNewWord)
+}
+
+const handleHideWordTranslate = () => {
+  setIsTranslateNewWord(!isTranslateNewWord)
+}
+
+const onPrevClick = () => {
+  let prevIndex = currentIndex-1;
+  if (prevIndex===-1) {
+    return "FINISH";
+  }
+  setCurrentIndex(prevIndex)
+}
+
+const onNextClick = () => {
+  let nextIndex = currentIndex+1;
+  if (nextIndex===wordDescribe.length) {
+    nextIndex = 0;
+  }
+  setCurrentIndex(nextIndex)
+}
+
+
+
+
 //карточки
 const cardDescribe = cardsArr;
 
@@ -120,19 +154,33 @@ const cardDescribe = cardsArr;
  
 
   <div className={styles.cardsContainer}>
+
+    
   {cardDescribe.map((card)=>
      <Card key={card.transcript} title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample}/>)
     }
   </div>
-  
-  
 
  <ButtonAddCard/>
 
-  <div className={styles.wordsContainer}>
-    { wordDescribe.map((word)=>
+ <div className={styles.words}>
+
+ <button onClick={onPrevClick} className={styles.buttonList}>&#8592;</button>
+  {/* <div className={styles.wordsNewContainer}> */}
+   {/* { wordDescribe.map((word)=>
      <Word key={word.title} title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample} isSelected={word.isSelected}/>)
-    }
+    }  */}
+
+    {isTranslateNewWord
+    ? <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.translate}</span><br></br>
+     <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translate</button></div> 
+    : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.title}</span><br></br>
+  <button onClick={handleWordTranslate} className={styles.buttonWordTranslate}>Translate</button>
+  </div>}
+
+ 
+  
+    <button onClick={onNextClick} className={styles.buttonList}>&#8594;</button>
   </div>
 
 <ButtonAddWord/>

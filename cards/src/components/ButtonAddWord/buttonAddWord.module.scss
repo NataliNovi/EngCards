@@ -9,7 +9,7 @@
 
 .buttonAddWord {
    
-    background: white;
+    background:var(--button-background-color);
 	color: var(--text-color);
 	box-shadow: inset 4px 2px 2px 3px var(--border-button);
     border: solid 3px var(--button-background-color);
@@ -29,7 +29,7 @@
 .buttonAddWord:hover {
 
     color: var(--text-color);
-    background: var(--button-background-color);
+    background: white;
     border: var(--border-button);
 	
     -webkit-transform: translate(10px);

@@ -17,6 +17,12 @@
     font-weight: regular;
 }
 
+@mixin font-style-large-text {
+    font-family: "Arial";
+    font-size: 1.8em;
+    font-weight: regular;
+}
+
 @mixin font-style-button-text {
     font-family: "Arial";
     font-size: 1.2em;
