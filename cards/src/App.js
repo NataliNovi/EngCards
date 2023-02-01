@@ -6,9 +6,9 @@ import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 //import Read from './components/Read-Change-Delete/Read-Change-Delete';
 //import Translate from './components/Translate/Translate';
 import Card from './components/Card/Card.jsx';
-import {cardsArr} from './constants/const_cardsArr';
+import {cardsArr} from './data/cardsDataArr';
 //import Word from './components/Word/Word.jsx';
-import {wordsArr} from './constants/const_wordsArr';
+import {wordsArr} from './data/wordsDataArr';
 import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
 import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
 //import TransButton from './components/Transbutton/Transbutton';
@@ -18,7 +18,7 @@ import Know from './components/Knowcards/Know';
 import Remaincards from './components/Remaincards/Remaincards';
 import Dontknow from './components/Dontknowcards/Dontknow';
 import Footer from './components/Footer/Footer.jsx';
-import { wordsListArr } from './constants/wordsList';
+import { wordsListArr } from './data/wordsList';
 
  
 // получение JSON-файла через fetch
@@ -177,7 +177,7 @@ const cardDescribe = cardsArr;
     ? <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.translate} </span><br></br> <img className={styles.imgWord} src = {wordCard.photo} alt ="print" />
      <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translation</button></div> 
     : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.title}</span><br></br>
-  <button onClick={handleWordTranslate} className={styles.buttonWordTranslate}>Translate</button>
+  <button onClick={handleWordTranslate} className={styles.buttonWordTranslate}>Translation</button>
   </div>}
 
  
