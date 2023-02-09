@@ -8,13 +8,13 @@
       @include font-style-button-text;
       border: var(--border-button);
       width:60%;
-      -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      -webkit-transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .hideAnswer:hover { 
     -webkit-transform: translate(10px);
-    transform: translate(10px);
+    transform: translate(5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
     }
 
@@ -23,6 +23,7 @@
     margin-top: 10px;
   }
 
+ 
 
 
 

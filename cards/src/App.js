@@ -1,5 +1,11 @@
 import styles from './App.module.scss';
 import React, {useState} from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from 'react-router-dom';
 import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
 import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
@@ -19,6 +25,7 @@ import Remaincards from './components/Remaincards/Remaincards';
 import Dontknow from './components/Dontknowcards/Dontknow';
 import Footer from './components/Footer/Footer.jsx';
 import { wordsListArr } from './data/wordsList';
+import Menu from './components/Menu/Menu';
 
  
 // получение JSON-файла через fetch
@@ -139,6 +146,9 @@ const cardDescribe = cardsArr;
   return (
     <div className={styles.App}>
       <Header></Header>
+
+      <Menu/>
+
       <Main></Main>
     
 
@@ -200,6 +210,9 @@ const cardDescribe = cardsArr;
     </div>
   );
 }
+
+
+
 
 export default App;
 
