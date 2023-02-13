@@ -6,7 +6,8 @@
     background: var(--button-background-color);
     @include font-style-button-text;
     border: var(--border-button);
-    width: 60%;
+    border-radius: var(--border-radius);
+    width: 16vw;
     -webkit-transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

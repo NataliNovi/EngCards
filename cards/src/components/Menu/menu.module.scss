@@ -1,0 +1,199 @@
+@import '..//../assets/styles/mixins.scss';
+@import '..//../assets/styles/variables.scss';
+
+.linksList {
+    @include font-style-regular-text;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    text-decoration: none;
+}
+   
+   
+
+
+.link {
+    margin: 10px;
+    color: black;
+}
+   
+
+
+.wordsListTable {
+    width: 96%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: var(--border-table-list);
+    background-color: var(--remainCard-background);
+    }
+    
+    .id, .english, .transcription, .russian, .tableButtons {
+    width: 20%;
+    @include font-style-regular-text;
+    }
+    
+    .tableButtons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .listButton {
+        background: var(--button-background-color);
+        @include font-style-button-text;
+        border: var(--border-button);
+        border-radius: 10px;
+    }
+    
+
+.cardsContainer {
+    display: grid;
+    /* grid-template-columns: 19% 19% 19% 19% 19%; */
+    grid-template-columns: repeat(5, 19%);
+    grid-template-rows: auto;
+    gap: 1em;
+    }
+
+
+/* .wordsPart {
+    display: flex;
+    flex-direction: column;
+} */
+
+.words {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  border: solid 10px var(--custom-yellow);
+  padding: 20px;
+ position: relative;
+}
+
+.wordCard {
+ 
+  border: solid 2px black;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  border: double 2px gray;
+  margin-top: 0px;
+  width: 20vw;
+  height: 20em;
+  text-align: center;
+  @include font-style-regular-text;
+  padding-bottom: 10px;
+  position: relative;
+
+}
+
+.wordTitle {
+  font-size: 1.8em;
+  
+}
+
+.imgWord {
+  width: 30%;
+  height: 80px;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 120px;
+}
+
+.buttonList {
+    margin: 30px;
+    background: white;
+    border: transparent;
+    width: 10%;
+    height: 40px;
+    font-size: 3em;
+    -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.buttonList:hover { 
+    background: var(--button-background-color);
+    -webkit-transform: translate(10px);
+    transform: translate(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
+    }
+
+
+.buttonWordTranslate {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 30px;
+    background: var(--button-background-color);
+    @include font-style-button-text;
+    border: var(--border-button);
+    border-radius: var(--border-radius);
+    width: 16vw;
+    -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: absolute;
+    bottom: 50px;
+}
+
+.buttonWordTranslate:hover { 
+    -webkit-transform: translate(10px);
+    transform: translate(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
+    }
+
+
+.buttonAddWordContainer {
+        width: 10rem;
+        height: 100%;
+        @include flex-column;
+        position: absolute;
+        bottom: 00px;
+        right: 60px;
+    
+    }
+    
+    
+    .buttonAddWord {
+       
+        background:var(--button-background-color);
+        color: var(--text-color);
+        box-shadow: inset 4px 2px 2px 3px var(--border-button);
+        border: solid 3px var(--button-background-color);
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        border-radius: var(--border-radius);
+        margin-top: 0px;
+        height: 90%;
+        width: 50%;
+        @include font-style-big-button-text;
+    
+        -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    
+    .buttonAddWord:hover {
+    
+        color: var(--text-color);
+        background: white;
+        border: var(--border-button);
+        
+        -webkit-transform: translate(10px);
+        transform: translate(10px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
+    }
+
+    

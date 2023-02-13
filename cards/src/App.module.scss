@@ -1,10 +1,30 @@
 @import './assets/styles/mixins.scss';
 @import './assets/styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 .App {
   width: 100vw;
   padding: 6px;
 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.slogan {
+  color: var(--custom-yellow);
+  font-size: 3em;
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.logo {
+  width: 12vw;
 }
 
 .wordsListContainer {

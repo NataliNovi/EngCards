@@ -1,31 +1,33 @@
 import styles from './App.module.scss';
-import React, {useState} from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom';
+import React from 'react';
+// import {
+//   createBrowserRouter,
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from 'react-router-dom';
 import './components/Word/Word.jsx';
-import Table from './components/Table/Table';
-import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
+//import Table from './components/Table/Table';
+//import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 //import Read from './components/Read-Change-Delete/Read-Change-Delete';
 //import Translate from './components/Translate/Translate';
-import Card from './components/Card/Card.jsx';
-import {cardsArr} from './data/cardsDataArr';
+//import Card from './components/Card/Card.jsx';
+//import {cardsArr} from './data/cardsDataArr';
 //import Word from './components/Word/Word.jsx';
-import {wordsArr} from './data/wordsDataArr';
-import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
-import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
+//import {wordsArr} from './data/wordsDataArr';
+//import ButtonAddWord from './components/ButtonAddWord/ButtonAddWord';
+//import ButtonAddCard from './components/ButtonAddCard/ButtonAddCard';
 //import TransButton from './components/Transbutton/Transbutton';
-import Header from './components/Header/Header.jsx';
+//import Header from './components/Header/Header.jsx';
 import Main from './components/Mainpage/Main.jsx';
 import Know from './components/Knowcards/Know';
 import Remaincards from './components/Remaincards/Remaincards';
 import Dontknow from './components/Dontknowcards/Dontknow';
 import Footer from './components/Footer/Footer.jsx';
-import { wordsListArr } from './data/wordsList';
+//import { wordsListArr } from './data/wordsList';
 import Menu from './components/Menu/Menu';
+import logo from '..//src/assets/photo/logoBoy.jpeg';
 
  
 // получение JSON-файла через fetch
@@ -64,138 +66,162 @@ import Menu from './components/Menu/Menu';
 function App() {
 
 //это к таблице со словами
-const wordsList = wordsListArr;
+// const wordsList = wordsListArr;
 
-const [words, setWords] = useState(wordsList);
+// const [words, setWords] = useState(wordsList);
 
-const handleDeleteWord = (id) => {
-  words.forEach(el => {
+// const handleDeleteWord = (id) => {
+//   words.forEach(el => {
 
-    if(el.isActive) {
-      el.isActive=false;
-    }
+//     if(el.isActive) {
+//       el.isActive=false;
+//     }
    
-    if(el.id === id) {
-      el.isActive = true;
-    }
-    setWords([...words])
+//     if(el.id === id) {
+//       el.isActive = true;
+//     }
+//     setWords([...words])
 
-    if(el.isActive===true) {
-      console.log('удалили элемент с индексом ' + el.index)
-      wordsList.splice(`${el.index}`, 1)
-    }
+//     if(el.isActive===true) {
+//       console.log('удалили элемент с индексом ' + el.index)
+//       wordsList.splice(`${el.index}`, 1)
+//     }
 
-  })}
+//   })}
+  
 
 
 //слова
-const wordDescribe = wordsArr;
-const[currentIndex, setCurrentIndex]= useState(0);
-let wordCard = wordDescribe[currentIndex];
+// const wordDescribe = wordsArr;
+// const[currentIndex, setCurrentIndex]= useState(0);
+// let wordCard = wordDescribe[currentIndex];
 //console.log(wordCard)
 
-const [isTranslateNewWord, setIsTranslateNewWord] = React.useState(false);
+// const [isTranslateNewWord, setIsTranslateNewWord] = React.useState(false);
 
 
-const handleWordTranslate = () => {
-  setIsTranslateNewWord(!isTranslateNewWord)
-}
+// const handleWordTranslate = () => {
+//   setIsTranslateNewWord(!isTranslateNewWord)
+// }
 
-const handleHideWordTranslate = () => {
-  setIsTranslateNewWord(!isTranslateNewWord)
-}
+// const handleHideWordTranslate = () => {
+//   setIsTranslateNewWord(!isTranslateNewWord)
+// }
 
-const onPrevClick = () => {
-  let prevIndex = currentIndex-1;
-  if (currentIndex===0) {
-    prevIndex = wordDescribe.length-1;
+// const onPrevClick = () => {
+//   let prevIndex = currentIndex-1;
+//   if (currentIndex===0) {
+//     prevIndex = wordDescribe.length-1;
     //return "FINISH";
-  }
-  setCurrentIndex(prevIndex)
-}
+//   }
+//   setCurrentIndex(prevIndex)
+// }
 
-const onNextClick = () => {
-  let nextIndex = currentIndex+1;
-  if (nextIndex===wordDescribe.length) {
-    nextIndex = 0;
-     //return "FINISH";
-  }
-  setCurrentIndex(nextIndex)
-}
+// const onNextClick = () => {
+//   let nextIndex = currentIndex+1;
+//   if (nextIndex===wordDescribe.length) {
+//     nextIndex = 0;
+//      //return "FINISH";
+//   }
+//   setCurrentIndex(nextIndex)
+// }
 
 
 
 
 //карточки
-const cardDescribe = cardsArr;
+// const cardDescribe = cardsArr;
 
-  const[isInputShow, setIsInputShow] = useState(false);
+  // const[isInputShow, setIsInputShow] = useState(false);
 
-  const handleCorrectWord = () => {
-    setIsInputShow(!isInputShow)
-  }
+  // const handleCorrectWord = () => {
+  //   setIsInputShow(!isInputShow)
+  // }
 
-  const handleCancelWordChange = () => {
-    setIsInputShow(!isInputShow)
-  }
+  // const handleCancelWordChange = () => {
+  //   setIsInputShow(!isInputShow)
+  // }
 
-  const handleSaveWordChange = () => {
-    setIsInputShow(!isInputShow)
-  }
+  // const handleSaveWordChange = () => {
+  //   setIsInputShow(!isInputShow)
+  // }
+
+  // const router = createBrowserRouter([
+  //   {
+  //     path: "/",
+  //     element: (
+  //       <div>
+  //         <h1>Hello World</h1>
+  //         <Link to="about">About Us</Link>
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     path: "about",
+  //     element: <div>About</div>,
+  //   },
+  // ]);
 
   return (
+    
     <div className={styles.App}>
-      <Header></Header>
 
-      <Menu/>
+      
+      <header className={styles.header}>  
+      <h1 className={styles.slogan}>Learn by Playing</h1>
+      <img className={styles.logo} src={logo} alt="logo"/>
+    
+      </header>
 
-      <Main></Main>
+   
     
 
-  {isInputShow
+  {/* {isInputShow
             ? <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
             :  <div className={styles.table}>
             {wordsList.map((item)=>
                     <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
                   )}
             </div>
-            }
+            } */}
       {/* {actionItem} это к условному рендеру*/}
 
 
  
 
-  <div className={styles.cardsContainer}>
-
-    
+  {/* <div className={styles.cardsContainer}>
+ 
   {cardDescribe.map((card)=>
      <Card key={card.transcript} title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample}/>)
     }
-  </div>
+  </div> */}
 
- <ButtonAddCard/>
+ {/* <ButtonAddCard/> */}
+ <main>
+ <Menu></Menu>
+ <Main></Main>
+ </main>
 
- <div className={styles.words}>
 
- <button onClick={onPrevClick} className={styles.buttonList}>&#8592;</button>
+
+ {/* <div className={styles.words}> */}
+
+ {/* <button onClick={onPrevClick} className={styles.buttonList}>&#8592;</button> */}
   {/* <div className={styles.wordsNewContainer}> */}
    {/* { wordDescribe.map((word)=>
      <Word key={word.title} title={word.title} photo={word.photo} mean={word.mean} transcript = {word.transcript} translate = {word.translate} theme = {word.theme} sample = {word.sample} isSelected={word.isSelected}/>)
     }  */}
 
-    {isTranslateNewWord
+    {/* {isTranslateNewWord
     ? <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.translate} </span><br></br> <img className={styles.imgWord} src = {wordCard.photo} alt ="print" />
      <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translation</button></div> 
     : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.title}</span><br></br>
   <button onClick={handleWordTranslate} className={styles.buttonWordTranslate}>Translation</button>
   </div>}
-
- 
-  
     <button onClick={onNextClick} className={styles.buttonList}>&#8594;</button>
-  </div>
+  </div> */}
 
-<ButtonAddWord/>
+{/* <ButtonAddWord/> */}
 
 
 <div className={styles.resultsContainer}>

@@ -4,6 +4,7 @@
 .buttonAddCardContainer {
     width: 100vw;
     @include flex-column;
+    margin-bottom: 50px;
 }
 
 
