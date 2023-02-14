@@ -1,6 +1,7 @@
 @import './assets/styles/mixins.scss';
 @import './assets/styles/variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import './assets/styles/normalize.css';
 
 .App {
   width: 100vw;
@@ -13,6 +14,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  background-color: rgb(224, 233, 247);
 }
 
 .slogan {
@@ -24,7 +26,9 @@
 }
 
 .logo {
-  width: 12vw;
+  width: 10vw;
+  margin: 5px;
+ 
 }
 
 .wordsListContainer {

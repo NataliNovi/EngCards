@@ -1,5 +1,5 @@
 import styles from './main.module.scss';
-import photo from '../../assets/photo/photo.webp';
+import photo from '../../assets/photo/mainPhoto.avif';
 function Main () {
     return (
         <div className={styles.main}>

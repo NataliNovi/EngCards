@@ -2,9 +2,9 @@ import styles from './table.module.scss';
 import React, {useState} from 'react';
 
 function Table (props) {
-    console.log('isActive  ' + props.isActive)
-    console.log("id " + props.id)
-    console.log("index  " + props.index)
+    //console.log('isActive  ' + props.isActive)
+    //console.log("id " + props.id)
+    //console.log("index  " + props.index)
 
 
     const [id, setId] = useState(props.id);

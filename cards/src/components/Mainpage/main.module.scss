@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
 .mainImg {
     width: 100vw;
 }
@@ -5,18 +7,19 @@
 .mainSlogan {
     height: 15%;
     width: 40%;
-    font-size: 4vw;
+    font-size: 3vw;
+    color: rgb(3, 83, 136);
     position: absolute;
-    top: 38%;
+    top: 5%;
     left: 30%;
     background-color: var(--custom-yellow);
-    border: double;
     padding: 4px 12px 4px 12px;
     border-radius: 12px;
     text-align: center;
     display: flex;
    align-items: center;
    justify-content: center;
+   font-family: 'Mochiy Pop P One', sans-serif;
 }
 
 

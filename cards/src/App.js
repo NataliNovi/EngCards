@@ -1,15 +1,15 @@
 import styles from './App.module.scss';
-import React from 'react';
-// import {
-//   createBrowserRouter,
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   Link
-// } from 'react-router-dom';
+import React, {useState} from 'react';
+import {
+//createBrowserRouter,
+BrowserRouter as Router,
+Routes,
+Route,
+Link
+} from 'react-router-dom';
 import './components/Word/Word.jsx';
-//import Table from './components/Table/Table';
-//import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
+import Table from './components/Table/Table';
+import Input from './components/Input-Save-Cancel/Input-Save-Cancel'
 //import Read from './components/Read-Change-Delete/Read-Change-Delete';
 //import Translate from './components/Translate/Translate';
 //import Card from './components/Card/Card.jsx';
@@ -25,72 +25,90 @@ import Know from './components/Knowcards/Know';
 import Remaincards from './components/Remaincards/Remaincards';
 import Dontknow from './components/Dontknowcards/Dontknow';
 import Footer from './components/Footer/Footer.jsx';
-//import { wordsListArr } from './data/wordsList';
+import { wordsListArr } from './data/wordsList';
 import Menu from './components/Menu/Menu';
 import logo from '..//src/assets/photo/logoBoy.jpeg';
+import { render } from '@testing-library/react';
 
- 
-// получение JSON-файла через fetch
-/*fetch("./src/constants/wordsList.json",{
-  method: 'GET',
-  headers: {
-      'Content-Type': 'application/json;charset=utf-8'
-  },
-})
-.then((response) => {
-  let list = response.json();
-  return list;
-})
-.then((list) => {
-  console.log(list);
-  //getFlowersOut(catalogue);
-})
-
-.catch(error => console.log(error))*/
-
-
-
-
-  /*через условный рендеринг*/
-  /*const isInputField = false;
-  let actionItem;
-
-  if (isInputField) { 
-    actionItem = <Input/>; 
-  }  else {
-    actionItem = wordsListArr.map((item) =>
-    (<Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
-  ))}*/
 
 
 function App() {
+    // /* поля таблицы через условный рендеринг*/
+    // const isInputField = false;
+    // //let actionItem;
+  
+    // if (isInputField) { 
+    //  <Input/>; 
+    // }  else
+    //  {  wordsListArr.map((item) =>
+    //   (<Read key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags}/>
+    // ))}
+
+    const[isInputShow, setIsInputShow] = useState(false);
+
+
+    const handleCorrectWord = () => {
+      setIsInputShow(!isInputShow)
+    }
+  
+    const handleCancelWordChange = () => {
+      setIsInputShow(!isInputShow)
+    }//
+  
+    const handleSaveWordChange = () => {
+      setIsInputShow(!isInputShow)
+    }
+
+      //работа с нажатием логотипа
+
+
+  const[isLogoClicked, setIsLogoClicked] = useState(true);
+
+  let isShowWordsList;
+  
+  const handleShowWordsList = () => {
+    setIsLogoClicked(!isLogoClicked)
+    console.log('escape')
+  }
+
+  if (isLogoClicked) {
+    isShowWordsList = true;
+
+  }
+
+  if (isShowWordsList === true) {
+  
+  }
+
+ 
 
 //это к таблице со словами
-// const wordsList = wordsListArr;
+ const wordsList = wordsListArr;
 
-// const [words, setWords] = useState(wordsList);
+const [words, setWords] = useState(wordsList);
 
-// const handleDeleteWord = (id) => {
-//   words.forEach(el => {
+ const handleDeleteWord = (id) => {
+  words.forEach(el => {
 
-//     if(el.isActive) {
-//       el.isActive=false;
-//     }
+   if(el.isActive) {
+         el.isActive=false;
+  }
    
-//     if(el.id === id) {
-//       el.isActive = true;
-//     }
-//     setWords([...words])
+ if(el.id === id) {
+     el.isActive = true;
+    }
+   setWords([...words])
 
-//     if(el.isActive===true) {
-//       console.log('удалили элемент с индексом ' + el.index)
-//       wordsList.splice(`${el.index}`, 1)
-//     }
+   if(el.isActive===true) {
+   console.log('удалили элемент с индексом ' + el.index)
+   wordsList.splice(`${el.index}`, 1)
+       }
 
-//   })}
+  })}
+
+
   
-
-
+  
 //слова
 // const wordDescribe = wordsArr;
 // const[currentIndex, setCurrentIndex]= useState(0);
@@ -127,54 +145,67 @@ function App() {
 // }
 
 
-
-
 //карточки
-// const cardDescribe = cardsArr;
+//const cardDescribe = cardsArr;
 
-  // const[isInputShow, setIsInputShow] = useState(false);
 
-  // const handleCorrectWord = () => {
-  //   setIsInputShow(!isInputShow)
-  // }
-
-  // const handleCancelWordChange = () => {
-  //   setIsInputShow(!isInputShow)
-  // }
-
-  // const handleSaveWordChange = () => {
-  //   setIsInputShow(!isInputShow)
-  // }
-
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/",
-  //     element: (
-  //       <div>
-  //         <h1>Hello World</h1>
-  //         <Link to="about">About Us</Link>
-  //       </div>
-  //     ),
-  //   },
-  //   {
-  //     path: "about",
-  //     element: <div>About</div>,
-  //   },
-  // ]);
 
   return (
     
     <div className={styles.App}>
 
-      
+       <Router>
       <header className={styles.header}>  
       <h1 className={styles.slogan}>Learn by Playing</h1>
-      <img className={styles.logo} src={logo} alt="logo"/>
-    
+      <h3>Здесь работает роутер, и Таблица появляется по клику на логотип. Но я не знаю как спрятать таблицу обратно?</h3>
+      <h3>Еще при вызове этой таблицы со словами должна прятаться такая же таблица из раздела main Menu - Words List</h3>
+      <Link to="/words_list">
+        <img className={styles.logo} onClick={() => handleShowWordsList()} src={logo} alt="logo"/>
+      </Link>
       </header>
 
-   
+      <Routes> 
+      <Route exact path="/words_list" element={ 
+            isInputShow
+             ?<Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
+             : <div className={styles.table}>
+            {wordsList.map((item)=>
+                    <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
+                  )}
+              </div>
+            }/>
+      </Routes>
+      </Router> 
+
+
+
     
+
+      <header className={styles.header}>  
+      <h1 className={styles.slogan}>Learn by Playing</h1>
+      <h3>Здесь пыталась по клику изменять стейт, но безрезультатно. Начало кода на строке 65</h3>
+        <img className={styles.logo} onClick={() => handleShowWordsList()} src={logo} alt="logo"/>
+   
+      </header>
+
+
+         
+          
+            {/* {isInputShow
+             ?<Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
+             : <div className={styles.table}>
+            {wordsList.map((item)=>
+                    <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
+                  )}
+              </div>} */}
+         
+
+      <main>
+      <Menu></Menu>
+      <Main></Main>
+      </main>
+    
+  
 
   {/* {isInputShow
             ? <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}/>
@@ -187,8 +218,6 @@ function App() {
       {/* {actionItem} это к условному рендеру*/}
 
 
- 
-
   {/* <div className={styles.cardsContainer}>
  
   {cardDescribe.map((card)=>
@@ -197,10 +226,10 @@ function App() {
   </div> */}
 
  {/* <ButtonAddCard/> */}
- <main>
+ {/* <main>
  <Menu></Menu>
  <Main></Main>
- </main>
+ </main> */}
 
 
 
@@ -224,11 +253,11 @@ function App() {
 {/* <ButtonAddWord/> */}
 
 
-<div className={styles.resultsContainer}>
+{/* <div className={styles.resultsContainer}>
   <Know/>
   <Remaincards/>
   <Dontknow/>
-  </div>
+  </div> */}
   
 
      <Footer/>
@@ -238,6 +267,9 @@ function App() {
 }
 
 
+// function MainPhrase() {
+//     return <h2>Hello to Main Page</h2>
+//   }
 
 
 export default App;

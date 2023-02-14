@@ -1,7 +1,7 @@
 import styles from './menu.module.scss';
 import React, {useState} from 'react';
 //import Word from '../Word/Word';
-//import Main from '../Mainpage/Main';
+import Main from '../Mainpage/Main';
 import Card from '../Card/Card';
 import Table from '../Table/Table';
 import Input from '../Input-Save-Cancel/Input-Save-Cancel';
@@ -120,7 +120,7 @@ const onNextClick = () => {
         <Routes>
           {/* главная */}
 
-          <Route path="/" element= {<MainPhrase/>}/>
+          <Route path="/" element= {<Main/>}/>
 
           {/* таблица слов */}
           <Route exact path="/words_list" element={ 
@@ -185,9 +185,9 @@ const onNextClick = () => {
 }
 
  
-  function MainPhrase() {
-    return <h2>Hello to Main Page</h2>
-  }
+  // function MainPhrase() {
+  //   return <h2>Hello to Main Page</h2>
+  // }
   
   // function Card() {
   // return <Card/>
@@ -198,6 +198,7 @@ const onNextClick = () => {
   // function Home() {
   //   return <h2>Home</h2>
   // }
+ 
 
   function NotFound() {
     return <h2>"404 SORRY COULDN'T FIND IT!!!"</h2>
