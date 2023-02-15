@@ -79,6 +79,7 @@ const handleHideWordTranslate = () => {
 
 const onPrevClick = () => {
   let prevIndex = currentIndex-1;
+  setIsTranslateNewWord(isTranslateNewWord==="")
   if (currentIndex===0) {
     prevIndex = wordDescribe.length-1;
     //return "FINISH";
@@ -88,6 +89,7 @@ const onPrevClick = () => {
 
 const onNextClick = () => {
   let nextIndex = currentIndex+1;
+  setIsTranslateNewWord(isTranslateNewWord==="")
   if (nextIndex===wordDescribe.length) {
     nextIndex = 0;
      //return "FINISH";
@@ -98,7 +100,7 @@ const onNextClick = () => {
 
    
     return (
-    <Router>
+   // <Router>
     <div className={styles.Router}>
     <nav>
     <ul className={styles.linksList}>
@@ -180,7 +182,7 @@ const onNextClick = () => {
         </Routes>
         </div>
 
-  </Router>
+  //</Router>
 );
 }
 
@@ -198,7 +200,9 @@ const onNextClick = () => {
   // function Home() {
   //   return <h2>Home</h2>
   // }
- 
+  // function Main() {
+  //   return <Main/>
+  //    }
 
   function NotFound() {
     return <h2>"404 SORRY COULDN'T FIND IT!!!"</h2>

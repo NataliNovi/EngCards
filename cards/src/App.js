@@ -5,7 +5,8 @@ import {
 BrowserRouter as Router,
 Routes,
 Route,
-Link
+Link,
+Redirect
 } from 'react-router-dom';
 import './components/Word/Word.jsx';
 import Table from './components/Table/Table';
@@ -154,7 +155,7 @@ const [words, setWords] = useState(wordsList);
     
     <div className={styles.App}>
 
-       <Router>
+       {/* <Router> */}
       <header className={styles.header}>  
       <h1 className={styles.slogan}>Learn by Playing</h1>
       <h3>Здесь работает роутер, и Таблица появляется по клику на логотип. Но я не знаю как спрятать таблицу обратно?</h3>
@@ -175,7 +176,7 @@ const [words, setWords] = useState(wordsList);
               </div>
             }/>
       </Routes>
-      </Router> 
+      {/* </Router>  */}
 
 
 
@@ -201,6 +202,7 @@ const [words, setWords] = useState(wordsList);
          
 
       <main>
+
       <Menu></Menu>
       <Main></Main>
       </main>
