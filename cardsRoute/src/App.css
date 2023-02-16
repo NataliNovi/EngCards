@@ -1,0 +1,46 @@
+@import './assets/styles/mixins.scss';
+@import './assets/styles/variables.scss';
+
+.App {
+    width: 100vw;
+
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(43, 81, 217);
+   
+  }
+  
+  .slogan {
+    color: var(--custom-yellow);
+    font-size: 2em;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-family: 'Mochiy Pop P One', sans-serif;
+  }
+  
+  .logo {
+    width: 10vw;
+    margin: 5px;
+   
+  }
+  
+  .link {
+    font-size: 1.5em;
+    background-color: rgb(255, 200, 0);
+    width: 10vw;
+    border-radius: 10px;
+   text-align: center;
+  }
+  
+  .active {
+   font-weight: 700;
+
+
+  
+  }
+

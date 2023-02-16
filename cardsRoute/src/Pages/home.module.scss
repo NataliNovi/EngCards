@@ -1,0 +1,27 @@
+.mainImg {
+    width: 100vw;
+}
+
+.mainSlogan {
+    height: 15%;
+    width: 40%;
+    font-size: 3vw;
+    color: rgb(3, 83, 136);
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    background-color: var(--custom-yellow);
+    padding: 4px 12px 4px 12px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+
+.main {
+position: relative;
+text-align: center;
+}

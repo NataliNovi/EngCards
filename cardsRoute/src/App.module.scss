@@ -31,6 +31,14 @@
  
 }
 
+.link {
+  @include font-style-regular-text;
+}
+
+.active {
+  background: var(--custom-yellow);
+}
+
 .wordsListContainer {
   margin-top: 50px;
 

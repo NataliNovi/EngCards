@@ -7,10 +7,11 @@ function Table (props) {
     //console.log("index  " + props.index)
 
 
-    const [id, setId] = useState(props.id);
+    //const [id, setId] = useState(props.id);
 
     return (
-        
+
+      
         <div className={styles.wordsListTable}>
             <div className={styles.id}>{props.id}</div>
             <div className={styles.english}>{props.english}</div>
@@ -18,7 +19,8 @@ function Table (props) {
             <div className={styles.russian}>{props.russian}</div>
             <div className={styles.tableButtons}><button className={styles.listButton}onClick={() => props.handleCorrectWord()} >Correct</button><button className={styles.listButton} onClick={() => props.handleDeleteWord(props.id)}>Delete</button></div>
         </div>
-         
+     
+    
     );
 }
 export default Table;
