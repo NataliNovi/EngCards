@@ -1,5 +1,6 @@
 @import './assets/styles/mixins.scss';
 @import './assets/styles/variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 .App {
     width: 100vw;
