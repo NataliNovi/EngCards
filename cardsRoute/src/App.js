@@ -27,10 +27,10 @@ function App() {
 
 <header className="header">
 <h1 className="slogan">Learn by Playing</h1>
-<a className="link"><NavLink to='/'>Home</NavLink></a>
-<a className="link"><NavLink to='/wordslist'>Words List</NavLink></a>
-<a className="link"><NavLink to='/cardsgame'>Cards Game</NavLink></a>
- <a className="link"><NavLink to='/wordsgame'>Words Game</NavLink></a>
+<NavLink className="link" to='/'>Home</NavLink>
+<NavLink className="link" to='/wordslist'>Words List</NavLink>
+<NavLink className="link" to='/cardsgame'>Cards Game</NavLink>
+<NavLink className="link" to='/wordsgame'>Words Game</NavLink>
 <Link to="/logo"><img className="logo" src={logo} alt="logo"/></Link>
 </header>
 
