@@ -6,11 +6,14 @@ import styles from './cardsgame.module.scss'
 
 export default function CardsGame() {
     const cardDescribe = cardsArr;
+   const hideAllAnswers=()=>{
+
+    }
 
     return (
       <>
       <div className={styles.buttonHideTranslationContainer}>
-      <button className={styles.buttonHideTranslation}>Hide all answers</button>
+      <button  onClick ={hideAllAnswers} className={styles.buttonHideTranslation}>Hide all answers</button>
       </div>
 
     <div className={styles.cardsContainer}>
