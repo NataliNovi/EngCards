@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { wordsArr } from '../data/wordsDataArr';
 import styles from './wordsgame.module.scss'
-import Word from '..//components/Word/Word'
-import ButtonAddWord from '..//components/ButtonAddWord/ButtonAddWord'
+
 
 export default function WordsGame() {
 
@@ -24,19 +23,22 @@ export default function WordsGame() {
     }
     
     const onPrevClick = () => {
+        setIsTranslateNewWord(isTranslateNewWord==="")
       let prevIndex = currentIndex-1;
       if (currentIndex===0) {
         prevIndex = wordDescribe.length-1;
-        return "FINISH";
+        
+        
       }
       setCurrentIndex(prevIndex)
     }
     
     const onNextClick = () => {
+        setIsTranslateNewWord(isTranslateNewWord==="")
       let nextIndex = currentIndex+1;
       if (nextIndex===wordDescribe.length) {
         nextIndex = 0;
-         //return "FINISH";
+       
       }
       setCurrentIndex(nextIndex)
     }
