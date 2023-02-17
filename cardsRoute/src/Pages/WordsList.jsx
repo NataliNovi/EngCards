@@ -3,6 +3,7 @@ import styles from './wordslist.module.scss'
 import { wordsListArr } from '..//data/wordsList';
 import Table from '..//components/Table/Table';
 import Input from '..//components/Input-Save-Cancel/Input-Save-Cancel';
+import Footer from '../components/Footer/Footer';
 
 
 
@@ -66,8 +67,11 @@ const [words, setWords] = useState(wordsList);
 
             </div>
     
-         
+        
     )
     }
   
     export default WordsList;
+
+
+    
