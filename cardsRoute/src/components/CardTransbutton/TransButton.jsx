@@ -1,15 +1,15 @@
+import React, { forwardRef } from 'react';
 import styles from './transbutton.module.scss';
 //import React, {useState} from 'react';
 
-function TransButton (props) {
+const TransButton = forwardRef(({handleShowTranslate}, ref) => (
     //console.log(props)
    
-    return (
-        
+  
         <div className={styles.button}>
-           <button className={styles.transButton} onClick = {() => props.handleShowTranslate()}>Answer</button>
+           <button ref={ref} className={styles.transButton} onClick = {() => handleShowTranslate()}>Answer</button>
         </div>
          
-    );
-}
+ ) );
+    
 export default TransButton;

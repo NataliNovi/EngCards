@@ -3,13 +3,14 @@
 
 .hideAnswer {
   
-      margin-top: 30px;
-      background: var(--button-background-color);
-      @include font-style-button-text;
-      border: var(--border-button);
-      width:60%;
-      -webkit-transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  margin-top: 30px;
+  background: var(--button-background-color);
+  @include font-style-button-text;
+  border: var(--border-button);
+  border-radius: var(--border-radius);
+  width: 16vw;
+  -webkit-transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
   .hideAnswer:hover { 
@@ -22,6 +23,8 @@
     font-weight: 600;
     margin-top: 10px;
   }
+
+
 
  
 

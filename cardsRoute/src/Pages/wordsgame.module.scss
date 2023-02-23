@@ -1,11 +1,30 @@
 @import '..//assets/styles/mixins.scss';
 @import '..//assets/styles/variables.scss';
 
-.wordImg  {
-    height: 150px;
-    width: 90%;
-    margin-top: 10px;
-}
+
+    .learnedWords {
+      position: absolute;
+      bottom: 50px;
+      left: 60px;
+      color: var(--text-color);
+      background: white;
+      border: var(--border-button);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      border-radius: var(--border-radius);
+      @include font-style-big-button-text;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 10%;
+      width: 20%;
+    }
+
+      
+    .wordImg  {
+          height: 150px;
+          width: 90%;
+          margin-top: 10px;
+      }
 
 
     .words {
@@ -81,12 +100,14 @@
           background: var(--button-background-color);
           @include font-style-button-text;
           border: var(--border-button);
+          border-radius: var(--border-radius);
           width: 60%;
           -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
           transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
           position: absolute;
           bottom: 50px;
       }
+
       
       .buttonWordTranslate:hover { 
           -webkit-transform: translate(10px);
@@ -94,17 +115,6 @@
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
           }
 
-      
-          .buttonAddWordContainer {
-            width: 10rem;
-            height: 100%;
-            @include flex-column;
-            position: absolute;
-            bottom: 00px;
-            right: 60px;
-        
-        }
-        
         
         .buttonAddWord {
            
@@ -116,9 +126,13 @@
             text-orientation: upright;
             border-radius: var(--border-radius);
             margin-top: 0px;
-            height: 80%;
-            width: 50%;
+            height: 10%;
+            width: 20%;
             @include font-style-big-button-text;
+            position: absolute;
+            top: 50px;
+            right: 60px;
+        
         
             -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
             transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);

@@ -14,12 +14,7 @@ import Footer from './components/Footer/Footer'
 import logo from '..//src/assets/photo/logoBoy.jpeg';
 import {Home,WordsList,CardsGame,WordsGame,Error} from './Pages';
 
-
-
-
 function App() {
-
-
 
   return (
 
@@ -49,8 +44,6 @@ function App() {
 );
 }
 
-
-    
 
 
 export default App;

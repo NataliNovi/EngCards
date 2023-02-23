@@ -1,5 +1,5 @@
 //import styles from './card.module.scss';
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import Translate from '../CardTranslate/CardTranslate';
 import TransButton from '../CardTransbutton/TransButton';
 import {cardsArr} from './const_cardsArr.js';
@@ -7,6 +7,10 @@ import classNames from 'classnames';
 import styles from './card.module.scss'
 
 function Card (props)  {
+
+  const ref = useRef();
+
+  useEffect(()=>{ref.current.focus()},[])
 
 
   const [isTranslateCard, setIsTranslateCard] = React.useState(false);
@@ -29,7 +33,7 @@ function Card (props)  {
             
             {isTranslateCard
             ?  <Translate key={props.transcript} photo={props.photo} title={props.title}  mean={props.mean} translate = {props.translate} transcript = {props.transcript} sample = {props.sample} handleHideAnswer = {handleHideAnswer}/>
-            : <TransButton handleShowTranslate={handleShowTranslate}/>
+            : <TransButton ref={ref} handleShowTranslate={handleShowTranslate}/>
             }
 
         </div>

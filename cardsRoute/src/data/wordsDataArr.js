@@ -7,6 +7,7 @@ export const wordsArr = [
     theme: "Colors",
     sample: "red dress",
     isActive: false,
+    id: 1,
 
     },
     {title: "Blue",
@@ -16,7 +17,9 @@ export const wordsArr = [
     translate: "Синий",
     theme: "Colors",
     sample: "blue hat",
-    isActive: false
+    isActive: false,
+    id: 2,
+
     },
     {title: "Yellow",
     photo: "https://funart.pro/uploads/posts/2021-04/1618493424_5-funart_pro-p-oboi-fon-zheltii-tsvet-6.png",
@@ -25,7 +28,8 @@ export const wordsArr = [
     translate: "Жёлтый",
     theme: "Colors",
     sample: "yellow shirt",
-    isActive: false
+    isActive: false,
+    id: 3,
     },
 
     {title: "Black",
@@ -35,7 +39,8 @@ export const wordsArr = [
     translate: "Чёрный",
     theme: "Colors",
     sample: "black coat",
-    isActive: false
+    isActive: false,
+    id: 4,
     },
 
     {title: "White",
@@ -45,7 +50,8 @@ export const wordsArr = [
     translate: "Белый",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 5,
     },
 
     {title: "Orange",
@@ -55,7 +61,8 @@ export const wordsArr = [
     translate: "Оранжевый",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 6,
     },
     {title: "Green",
     photo: "https://pimmedia.egger.com/l/decor/U600_9/s/Detail/f/881x513/8812251283486",
@@ -64,7 +71,8 @@ export const wordsArr = [
     translate: "Зелёный",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 7,
     },
     {title: "Gray",
     photo: "https://pimmedia.egger.com/l/decor/U732_PG/s/Detail/f/881x513/8803437379614",
@@ -73,7 +81,8 @@ export const wordsArr = [
     translate: "Серый",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 8,
     },
     {title: "Golden",
     photo: "https://static.vecteezy.com/system/resources/thumbnails/009/827/838/small/wave-golden-abstract-background-illustration-free-vector.jpg",
@@ -82,7 +91,8 @@ export const wordsArr = [
     translate: "Золотой",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 9,
     },
 
     {title: "Silver",
@@ -92,7 +102,8 @@ export const wordsArr = [
     translate: "Серебристый",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 10,
     },
 
     {title: "Ivory",
@@ -102,7 +113,8 @@ export const wordsArr = [
     translate: "Слоновая кость",
     theme: "Colors",
     sample: "pink car",
-    isActive: false
+    isActive: false,
+    id: 11,
     },
     {title: "Brown",
     photo: "https://htmlcolorcodes.com/assets/images/colors/saddle-brown-color-solid-background-1920x1080.png",
@@ -111,7 +123,8 @@ export const wordsArr = [
     translate: "Коричневый",
     theme: "Colors",
     sample: "",
-    isActive: false
+    isActive: false,
+    id: 12,
     },
     {title: "Turquoise",
     photo: "https://htmlcolorcodes.com/assets/images/colors/turquoise-color-solid-background-1920x1080.png",
@@ -120,7 +133,8 @@ export const wordsArr = [
     translate: "Бирюзовый",
     theme: "Colors",
     sample: "",
-    isActive: false
+    isActive: false,
+    id: 13,
     },
     
     
