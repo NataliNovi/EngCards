@@ -10,6 +10,7 @@ const CardsGame = () => {
     //const ref = useRef();
 
     const [isHideAllAnswers, setIsHideAllAnswers] = React.useState(false);
+   
 
     const cardDescribe = cardsArr;
 
@@ -20,14 +21,13 @@ const CardsGame = () => {
     return (
       <>
       <div className={styles.buttonHideTranslationContainer}>
-   
-      <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}>Hide all answers</button>
+      <button  onClick = {(e) => handleHideAllAnswers(e)}  className={styles.buttonHideTranslation}>Hide all answers</button>
       </div>
 
-    <div className={styles.cardsContainer}>
+      <div className={styles.cardsContainer}>
 
            {cardDescribe.map((card)=>
-        <Card key={card.transcript}  title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} isHideAllAnswers = {isHideAllAnswers}/>
+        <Card key={card.transcript}  title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} isHideAllAnswers={isHideAllAnswers}/>
 
        )}
           

@@ -16,6 +16,8 @@ import {Home,WordsList,CardsGame,WordsGame,Error} from './Pages';
 
 function App() {
 
+  
+
   return (
 
 <>
@@ -43,6 +45,8 @@ function App() {
 
 );
 }
+
+
 
 
 
