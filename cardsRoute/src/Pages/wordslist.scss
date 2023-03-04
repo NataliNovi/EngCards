@@ -20,10 +20,45 @@
     margin-top: 50px;
     }
     
-    .id, .english, .transcription, .russian, .tableButtons {
-    width: 20%;
+    .idInput, .englishInput, .transcriptionInput, .russianInput, .tableButtons {
+    width: 19%;
+    border-radius: 6px;
     @include font-style-regular-text;
+    
     }
+
+    .idInput:invalid {
+        border-color: red;
+       
+    } 
+     .englishInput:invalid {
+        border-color: red;
+    
+    } 
+      .transcriptionInput:invalid {
+        border-color: red;
+    } 
+       .russianInput:invalid {
+        border-color: red;
+    } 
+
+    .idInput:valid {
+       border: var(--border-table-list);
+    } 
+
+    .englishInput:valid {
+        border: var(--border-table-list);
+     } 
+    
+    .transcriptionInput:valid {
+        border: var(--border-table-list);
+     } 
+    
+    .russianInput:valid {
+        border: var(--border-table-list);
+     } 
+
+
     
     .tableButtons {
         display: flex;
@@ -35,7 +70,7 @@
         background: var(--button-background-color);
         @include font-style-regular-text;
         border: var(--border-button);
-        border-radius: 10px;
+        border-radius: 6px;
     }
 
     
