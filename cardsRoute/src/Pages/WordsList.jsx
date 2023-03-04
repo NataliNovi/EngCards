@@ -88,7 +88,9 @@ const handleSaveWordChange = (e) => {
 
   //console.log(initialValue.id)
  
-  const regexEng = new RegExp(/^[a-zA-Z]*$/);
+  //const regexEng = new RegExp(/^[a-zA-Z]*$/);
+  //const regexEng = new RegExp(/[a-zA-Z0-9]+/gu);
+  const regexEng = new RegExp(/^[A-Za-z\s]*$/);
   
   const checkEng = () => {
     if (!regexEng.test(initialValue.eng)) {
@@ -99,7 +101,8 @@ const handleSaveWordChange = (e) => {
     }
     checkEng();
 
-    const regexTransl = new RegExp(/[^А-яЁё ]/g,"");
+
+    const regexTransl = new RegExp(/^[a-яё]+(?:[ -][a-яё]+)*$/i)
   
     const checkTransl = () => {
       if (!regexTransl.test(initialValue.translation)) {
