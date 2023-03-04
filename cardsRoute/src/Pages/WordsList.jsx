@@ -73,10 +73,59 @@ const validateInputs = validateValue(initialValue.id) && validateValue(initialVa
 
 // console.log(validateInputs);
 
+
+const [localInputValue, setLocalInputValue] = useState({
+  id: initialValue.id,
+  eng: initialValue.eng,
+  transcript: initialValue.transcript,
+  translation: initialValue.translation 
+})
+  //console.log(initialValue.id);
+  //console.log(initialValue.eng);
+
 const handleSaveWordChange = (e) => {
   setIsInputShow(!isInputShow)
-    
-  }  
+
+  //console.log(initialValue.id)
+ 
+  const regexEng = new RegExp(/^[a-zA-Z]*$/);
+  
+  const checkEng = () => {
+    if (!regexEng.test(initialValue.eng)) {
+      alert("Error in eng");
+    }
+    else console.log(initialValue.eng)
+   
+    }
+    checkEng();
+
+    const regexTransl = new RegExp(/[^А-яЁё ]/g,"");
+  
+    const checkTransl = () => {
+      if (!regexTransl.test(initialValue.translation)) {
+        alert("Error in translation");
+      }
+      else console.log(initialValue.translation)
+     
+      }
+      checkTransl();
+  
+
+
+  //   function checkEng(eng) {
+  //     const regexEng = new RegExp('/^[A-ZА-ЯЁ]+$/i');
+      
+  //     if (eng !== regexEng) {
+  //       console.log(initialValue.eng)
+        
+  //     }
+  //     else alert("Error in Eng");
+  //     }
+  
+  //     checkEng();
+
+   }
+
 
     return (
 
@@ -89,7 +138,7 @@ const handleSaveWordChange = (e) => {
              <input className='idInput' placeholder='id' type='text' onChange={onChangeValue} name="id" value={initialValue.id} required></input>
              <input className='englishInput' placeholder='english word' type='text' onChange={onChangeValue} name="eng" value={initialValue.eng} required></input>
              <input className='transcriptionInput' placeholder='transcript' type='text' onChange={onChangeValue} name="transcript" value={initialValue.transcript} required></input>
-             <input className='russianInput' placeholder='translation' type='text' onChange={onChangeValue} name="translation" value={initialValue.translation} pattern = {/^[A-ZА-ЯЁ]+$/i} required></input>
+             <input className='russianInput' placeholder='translation' type='text' onChange={onChangeValue} name="translation" value={initialValue.translation} required></input>
      
              <div className='tableButtons'>
               <button className='listButton' type='submit' onClick={handleSaveWordChange} disabled={!validateInputs} >Save</button>
