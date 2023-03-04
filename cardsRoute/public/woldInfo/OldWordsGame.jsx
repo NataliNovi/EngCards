@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { wordsArr } from '../data/wordsDataArr';
+import { wordsArr } from '../../src/data/wordsDataArr';
 import styles from './wordsgame.module.scss'
 
 

@@ -80,13 +80,13 @@ const [localInputValue, setLocalInputValue] = useState({
   transcript: initialValue.transcript,
   translation: initialValue.translation 
 })
-  //console.log(initialValue.id);
-  //console.log(initialValue.eng);
+
 
 const handleSaveWordChange = (e) => {
+  e.preventDefault(e);
   setIsInputShow(!isInputShow)
 
-  //console.log(initialValue.id)
+
  
   //const regexEng = new RegExp(/^[a-zA-Z]*$/);
   //const regexEng = new RegExp(/[a-zA-Z0-9]+/gu);
@@ -113,20 +113,6 @@ const handleSaveWordChange = (e) => {
       }
       checkTransl();
   
-
-
-  //   function checkEng(eng) {
-  //     const regexEng = new RegExp('/^[A-ZА-ЯЁ]+$/i');
-      
-  //     if (eng !== regexEng) {
-  //       console.log(initialValue.eng)
-        
-  //     }
-  //     else alert("Error in Eng");
-  //     }
-  
-  //     checkEng();
-
    }
 
 

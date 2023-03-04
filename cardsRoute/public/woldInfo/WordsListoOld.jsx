@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 import styles from './wordslist.module.scss'
-import { wordsListArr } from '../data/wordsList';
-import Table from '../components/Table/Table';
+import { wordsListArr } from '../../src/data/wordsList';
+import Table from '../../src/components/Table/Table';
 import Input from '../components/Input-Save-Cancel/Input-Save-Cancel';
-import Footer from '../components/Footer/Footer';
+import Footer from '../../src/components/Footer/Footer';
 
 
 
