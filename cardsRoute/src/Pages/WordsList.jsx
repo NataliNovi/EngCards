@@ -94,7 +94,7 @@ const handleSaveWordChange = (e) => {
   
   const checkEng = () => {
     if (!regexEng.test(initialValue.eng)) {
-      alert("Error in eng");
+      alert("Error in english word");
     }
     else console.log(initialValue.eng)
    
