@@ -12,7 +12,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: rgb(43, 81, 217);
+    background-color: var(--customer-blue);
    
   }
   
@@ -34,7 +34,7 @@
     font-size: 1.5em;
     background-color: rgb(255, 200, 0);
     width: 10vw;
-    border-radius: 10px;
+    border-radius: 6px;
    text-align: center;
    text-decoration: none;
    color: rgb(8, 43, 173);

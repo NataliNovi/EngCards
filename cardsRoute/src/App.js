@@ -40,6 +40,8 @@ function App() {
 <Route path='*' element={<Error/>}/>
 </Routes>
 
+
+<footer><Footer/></footer>
 </>
 
 );
@@ -51,5 +53,5 @@ function App() {
 
 export default App;
 
-<footer><Footer/></footer>
+
 
