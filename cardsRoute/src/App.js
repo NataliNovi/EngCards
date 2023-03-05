@@ -16,7 +16,6 @@ import {Home,WordsList,CardsGame,WordsGame,Error} from './Pages';
 
 function App() {
 
-  
 
   return (
 
@@ -26,8 +25,8 @@ function App() {
 <h1 className="slogan">Learn by Playing</h1>
 <NavLink className="link" to='/'>Home</NavLink>
 <NavLink className="link" to='/wordslist'>Words List</NavLink>
-<NavLink className="link" to='/cardsgame'>Cards Game</NavLink>
 <NavLink className="link" to='/wordsgame'>Words Game</NavLink>
+<NavLink className="link" to='/cardsgame'>Cards Game</NavLink>
 <Link to="/logo"><img className="logo" src={logo} alt="logo"/></Link>
 </header>
 
@@ -35,8 +34,8 @@ function App() {
 <Routes>
 <Route path='/' element={<Home/>}/>
 <Route path='/wordslist' element={<WordsList/>}/>
-<Route path='/cardsgame' element={<CardsGame/>}/>
 <Route path='/wordsgame' element={<WordsGame/>}/>
+<Route path='/cardsgame' element={<CardsGame/>}/>
 <Route path ='/logo' element={<Navigate to='/wordslist'/>}/>
 <Route path='*' element={<Error/>}/>
 </Routes>

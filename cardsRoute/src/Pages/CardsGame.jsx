@@ -6,7 +6,7 @@ import styles from './cardsgame.module.scss'
 
 //export default function CardsGame() {
 
-const CardsGame = () => {
+const CardsGame = (props) => {
     //const ref = useRef();
 
     const [isHideAllAnswers, setIsHideAllAnswers] = React.useState(false);
@@ -14,20 +14,25 @@ const CardsGame = () => {
 
     const cardDescribe = cardsArr;
 
+
    const handleHideAllAnswers=()=>{
-   setIsHideAllAnswers(!isHideAllAnswers)
+      setIsHideAllAnswers(!isHideAllAnswers)
   }
 
+  
     return (
       <>
       <div className={styles.buttonHideTranslationContainer}>
-      <button  onClick = {(e) => handleHideAllAnswers(e)}  className={styles.buttonHideTranslation}>Hide all answers</button>
+      {isHideAllAnswers?
+      <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}>Click here - you can see the answers</button>
+      :   <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}> Hide all answers</button>
+      }
       </div>
 
       <div className={styles.cardsContainer}>
 
            {cardDescribe.map((card)=>
-        <Card key={card.transcript}  title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} isHideAllAnswers={isHideAllAnswers}/>
+      <Card key={card.transcript}  title={card.title} photo={card.photo} mean={card.mean} question={card.question} translate = {card.translate} transcript = {card.transcript} theme = {card.theme} sample = {card.sample} isHideAllAnswers={isHideAllAnswers} />
 
        )}
           
@@ -38,3 +43,6 @@ const CardsGame = () => {
 
 
       export default CardsGame;
+
+
+      
