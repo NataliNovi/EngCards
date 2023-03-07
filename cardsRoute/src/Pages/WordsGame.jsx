@@ -7,8 +7,7 @@ import Learned from '../components/Learned/Learned';
 export default function WordsGame() {
 
   const ref = useRef();
-
-   useEffect(()=>{ref.current.focus()},[])
+    useEffect(()=>{ref.current.focus()},[])
   //useEffect(()=>{ref.current.focus()})
   
     let wordDescribe = wordsArr;

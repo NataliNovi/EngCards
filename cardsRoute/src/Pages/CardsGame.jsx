@@ -24,7 +24,7 @@ const CardsGame = (props) => {
       <>
       <div className={styles.buttonHideTranslationContainer}>
       {isHideAllAnswers?
-      <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}>Click here - you can see the answers</button>
+      <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}>Click here - and you can see the answers</button>
       :   <button  onClick = {handleHideAllAnswers}  className={styles.buttonHideTranslation}> Hide all answers</button>
       }
       </div>
