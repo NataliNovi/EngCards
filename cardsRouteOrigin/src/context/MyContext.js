@@ -3,9 +3,9 @@ import GetServices from "../services/GetServices";
 
 
 
-export const MyContext = createContext(); //хранилище
+export const MyContext = createContext();
 
-//пишем следующее для того, чтобы изменять контекст
+
 export const ContextProvider = ({children}) => {
     const [valueContext, setValueContext] = useState([])
     const values = {valueContext, setValueContext}

@@ -11,7 +11,6 @@ import DelServices from '../services/DelServices';
 
 
   async function handleDeleteWord(id) {
-    //console.log(id)
     DelServices.delWords(id)
     const copyContext = [...valueContext]
     const copyContextDel = copyContext.filter(item => item.id !==id)
@@ -30,33 +29,7 @@ import DelServices from '../services/DelServices';
     }
 
 
-  
-//это к таблице со словами
-// const wordsList = wordsListArr;
 
-//  const [words, setWords] = useState(wordsList);
-
- //const handleDeleteWord = (id) => {
-//   words.forEach(el => {
-
-//    if(el.isActive) {
-//          el.isActive=false;
-//   }
-   
-//  if(el.id === id) {
-//      el.isActive = true;
-//     }
-//    setWords([...words])
-
-//    if(el.isActive===true) {
-//    console.log('удалили элемент с индексом ' + el.index)
-//    wordsList.splice(`${el.index}`, 1)
-//        }
-
-//  })
-//}
-
- 
 const [initialValue, setInitialValue] = useState({
 id: '',
 eng: '',
@@ -69,7 +42,6 @@ function onChangeValue(e) {
   const localInitialValue = {...initialValue};
   localInitialValue[e.target.name] = e.target.value;
   setInitialValue(localInitialValue)
-  //console.log(localInitialValue)
 }
 
 function validateValue(value) {
@@ -80,8 +52,6 @@ function validateValue(value) {
 }
 
 const validateInputs = validateValue(initialValue.id) && validateValue(initialValue.eng)&& validateValue(initialValue.transcript) && validateValue(initialValue.translation);
-
-// console.log(validateInputs);
 
 
 const [localInputValue, setLocalInputValue] = useState({

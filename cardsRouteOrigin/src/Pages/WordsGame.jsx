@@ -1,25 +1,18 @@
 import React, {useState, useEffect, useRef} from 'react'
-//import { wordsArr } from '../data/wordsDataArr';
 import styles from './wordsgame.module.scss'
 import Learned from '../components/Learned/Learned';
 import {MyContext} from '..//context/MyContext';
 import { useContext } from 'react';
 import AddServices from '../services/AddServices';
+//import { wordsArr } from '../data/wordsDataArr';
 
 
 export default function WordsGame() {
    const {valueContext, setValueContext} = useContext(MyContext);
    console.log(valueContext)
 
-  //при перезагрузке страницы WordsGame теряется valueContext. Выдает ошибку (предохранители (компоненты Error Boundary))
-   
-  //  const [valueContextGame, setVaueContextGame] = useState([valueContext])
-  //  console.log(valueContextGame)
- 
-
   const ref = useRef();
     useEffect(()=>{ref.current.focus()},[])
-  //useEffect(()=>{ref.current.focus()})
   
     let wordDescribe = valueContext;
    

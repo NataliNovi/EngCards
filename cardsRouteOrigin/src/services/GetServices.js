@@ -3,7 +3,6 @@ class GetServices {
         try {
             const resp = await fetch ('http://itgirlschool.justmakeit.ru/api/words')
             const data = await resp.json()
-            //console.log(data)
             return data
             }
 

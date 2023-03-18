@@ -13,8 +13,7 @@ function Card (props)  {
 
   const ref = useRef();
   useEffect(()=>{ref.current.focus()},[])
-  //useEffect(()=>{ref.current.focus()})
-
+ 
   const [isTranslateCard, setIsTranslateCard] = React.useState(false);
   
   const handleShowAnswer= () => {
@@ -26,7 +25,7 @@ function Card (props)  {
   }
 
   if (props.isHideAllAnswers===true) {
-  //console.log('hide all answers = true')
+ 
     if (isTranslateCard===true){
               setIsTranslateCard(!isTranslateCard)         
     }
