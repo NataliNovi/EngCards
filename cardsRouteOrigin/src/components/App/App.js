@@ -9,10 +9,10 @@ Link,
 NavLink,
 Navigate
 } from 'react-router-dom';
-import './components/Word/Word.jsx';
-import Footer from './components/Footer/Footer'
-import logo from '..//src/assets/photo/logoBoy.jpeg';
-import {Home,WordsList,CardsGame,WordsGame,Error} from './Pages';
+import '../Word/Word.jsx';
+import Footer from '../Footer/Footer'
+import logo from '../../assets/photo/logoBoy.jpeg';
+import {Home,WordsList,CardsGame,WordsGame,Error} from '../../Pages';
 
 
 function App() {
@@ -20,8 +20,6 @@ function App() {
   return (
 
 <>
-
-
 
 <header className="header">
 <h1 className="slogan">Learn by Playing</h1>
