@@ -1,16 +1,27 @@
 import React, {useState} from 'react'
 import './wordslist.scss'
-import { wordsListArr } from '../data/wordsList';
-import Table from '../components/Table/Table';
+import {MyContext} from '..//context/MyContext';
+import { useContext } from 'react';
+import DelServices from '../services/DelServices';
 
 
  function WordsList() {
+  const {valueContext, setValueContext} = useContext(MyContext);
+  console.log(valueContext)
 
 
+  async function handleDeleteWord(id) {
+    //console.log(id)
+    DelServices.delWords(id)
+    const copyContext = [...valueContext]
+    const copyContextDel = copyContext.filter(item => item.id !==id)
+    setValueContext(copyContextDel)
+  }
+
+  
     const[isInputShow, setIsInputShow] = useState(false);
 
-
-    const handleCorrectWord = () => {
+    async function handleChangeWord () {
       setIsInputShow(!isInputShow)
     }
   
@@ -21,32 +32,31 @@ import Table from '../components/Table/Table';
 
   
 //это к таблице со словами
- const wordsList = wordsListArr;
+// const wordsList = wordsListArr;
 
- const [words, setWords] = useState(wordsList);
+//  const [words, setWords] = useState(wordsList);
 
- const handleDeleteWord = (id) => {
-  words.forEach(el => {
+ //const handleDeleteWord = (id) => {
+//   words.forEach(el => {
 
-   if(el.isActive) {
-         el.isActive=false;
-  }
+//    if(el.isActive) {
+//          el.isActive=false;
+//   }
    
- if(el.id === id) {
-     el.isActive = true;
-    }
-   setWords([...words])
+//  if(el.id === id) {
+//      el.isActive = true;
+//     }
+//    setWords([...words])
 
-   if(el.isActive===true) {
-   console.log('удалили элемент с индексом ' + el.index)
-   wordsList.splice(`${el.index}`, 1)
-       }
+//    if(el.isActive===true) {
+//    console.log('удалили элемент с индексом ' + el.index)
+//    wordsList.splice(`${el.index}`, 1)
+//        }
 
-  })}
+//  })
+//}
 
  
-
-
 const [initialValue, setInitialValue] = useState({
 id: '',
 eng: '',
@@ -95,6 +105,7 @@ const handleSaveWordChange = (e) => {
   const checkEng = () => {
     if (!regexEng.test(initialValue.eng)) {
       alert("Error in english word");
+      setIsInputShow(isInputShow===false);
     }
     else console.log(initialValue.eng)
    
@@ -112,13 +123,13 @@ const handleSaveWordChange = (e) => {
      
       }
       checkTransl();
-  
    }
+
 
 
     return (
 
-
+  
           <div className='wordsListTableContainer'>
              
         {isInputShow
@@ -134,75 +145,34 @@ const handleSaveWordChange = (e) => {
               <button className='listButton' type='submit' onClick={handleCancelWordChange}>Cancel</button>
               </div>
              </form>
-             {/* {console.log(initialValue)} */}
+           
              </div> 
-             : <div className='wordsList'>
-            {wordsList.map((item)=>
-                <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
-                  )}
-            </div>} 
+
+            : <div className='wordsList'>
+               <div>
+              {valueContext.map((item, key)=>
+              (
+              <div className = "tableRow" key = {key}>
+                <span>{item.id}</span><span>{item.english}</span><span>{item.transcription}</span><span>{item.russian}</span><span>{item.tags}</span>
+                <button className='listButton' onClick={()=>{handleChangeWord(item.id)}}>Change</button>
+                <button className='listButton' onClick={()=>{handleDeleteWord(item.id)}}>Delete</button>
+               
+
+              </div>
+              ))}
             </div>
 
-)
-}
+            </div>
+
+            }
+            </div>)}
+
+
 
 export default WordsList;
 
 
 
-// const [valueId, setValueId] = useState('');
-//   const onChangeValueId = (e) => {
-//       setValueId(e.target.value);
-
-//       if (valueId.length>0)
-//       console.log(valueId);
-//       return true;
-     
-// }
-
-//   const [valueEng, setValueEng] = useState('');
-//   const onChangeValueEng = (e) => {
-//       setValueEng(e.target.value);
-
-//       if (valueEng.length>0)
-//       console.log(valueEng);
-//       return true;
-      
-// }
-
-//   const [valueTranscript, setValueTranscript] = useState('');
-//   const onChangeValueTranscript = (e) => {
-//       setValueTranscript(e.target.value);
-
-//       if (valueTranscript.length>0)
-//       console.log(valueTranscript);
-//       return true;
-      
-// }
-
-//   const [valueTranslate, setValueTranslate] = useState('');
-//   const onChangeValueTranslate = (e) => {
-//       setValueTranslate(e.target.value);
-
-//       if (valueTranslate.length>0)
-//       console.log(valueTranslate);
-//       return true; 
-// }
-
-
-        //   <div className={styles.wordsListTableContainer}>
-             
-        // {isInputShow
-        //      ? <Input handleCancelWordChange = {handleCancelWordChange} handleSaveWordChange = {handleSaveWordChange}   />
-        //      : <div className={styles.wordsList}>
-        //     {wordsList.map((item)=>
-        //         <Table key={item.id} id={item.id} english={item.english} transcription={item.transcription} russian={item.russian} tags={item.tags} isActive = {item.isActive} index = {item.index} handleCorrectWord = {handleCorrectWord} handleDeleteWord = {handleDeleteWord} />
-        //           )}
-        //     </div>} 
-
-        //     </div>
-    
-        
 
 
     

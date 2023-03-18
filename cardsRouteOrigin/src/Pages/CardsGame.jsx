@@ -10,11 +10,8 @@ const CardsGame = (props) => {
     //const ref = useRef();
 
     const [isHideAllAnswers, setIsHideAllAnswers] = React.useState(false);
-   
-
     const cardDescribe = cardsArr;
-
-
+    
    const handleHideAllAnswers=()=>{
       setIsHideAllAnswers(!isHideAllAnswers)
   }

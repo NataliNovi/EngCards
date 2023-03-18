@@ -16,7 +16,7 @@
     padding-left: 30px;
     padding-right: 30px;
     border: var(--border-table-list);
-    background-color: var(--remainCard-background);
+    background-color: var(--customer-green);
     margin-top: 50px;
     }
     
@@ -71,6 +71,19 @@
         @include font-style-regular-text;
         border: var(--border-button);
         border-radius: 6px;
+    }
+
+    .tableRow {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background-color: var(--customer-green);
+        padding-left: 20px;
+        height: 30px;
+        border: var(--border-table-list);
+        font-size: 1.1rem;
+        @include font-style-regular-text;
+
     }
 
     

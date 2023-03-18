@@ -1,36 +1,40 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { wordsArr } from '../data/wordsDataArr';
+//import { wordsArr } from '../data/wordsDataArr';
 import styles from './wordsgame.module.scss'
 import Learned from '../components/Learned/Learned';
+import {MyContext} from '..//context/MyContext';
+import { useContext } from 'react';
+import AddServices from '../services/AddServices';
 
 
 export default function WordsGame() {
+   const {valueContext, setValueContext} = useContext(MyContext);
+   console.log(valueContext)
+
+  //при перезагрузке страницы WordsGame теряется valueContext. Выдает ошибку (предохранители (компоненты Error Boundary))
+   
+  //  const [valueContextGame, setVaueContextGame] = useState([valueContext])
+  //  console.log(valueContextGame)
+ 
 
   const ref = useRef();
     useEffect(()=>{ref.current.focus()},[])
   //useEffect(()=>{ref.current.focus()})
   
-    let wordDescribe = wordsArr;
+    let wordDescribe = valueContext;
+   
     const [isTranslateWord, setIsTranslateWord] = useState(false);
     const[currentIndex, setCurrentIndex]= useState(0);
     const [countLearnedWords, setCountLearnedWords] = useState(0);
     let wordCard = wordDescribe[currentIndex];
+    console.log(wordCard.english)
+    console.log(wordCard.russian)
     
-    
-
-    // for (let word of Object.keys(wordDescribe)) {
-    //   let index = wordDescribe[word];
-    //   console.log(word, index);
-    // }
-  
    
-    const handleWordTranslate = (id) => {
-      console.log(id);
+    const handleWordTranslate = () => {
       setIsTranslateWord(!isTranslateWord);
       setCountLearnedWords(countLearnedWords=>countLearnedWords+1 )
-
-      }
-
+    }
 
     const handleHideWordTranslate = () => {
       setIsTranslateWord(!isTranslateWord)
@@ -40,7 +44,6 @@ export default function WordsGame() {
         setIsTranslateWord(isTranslateWord==="")
       let prevIndex = currentIndex-1;
       if (currentIndex===0) {
-        // prevIndex = wordDescribe.length-1;
       return ('well done');
         
       }
@@ -59,6 +62,15 @@ export default function WordsGame() {
       setCurrentIndex(nextIndex)
     } 
 
+    async function handleAddWord() {
+      console.log('add')
+      AddServices.addWords()
+      const copyContext = [...valueContext]
+      const copyContextAdd = copyContext.push('Hello')
+      setValueContext(copyContextAdd)
+    }
+  
+
   
 
 
@@ -73,18 +85,18 @@ export default function WordsGame() {
           {isTranslateWord
           ? <div className={styles.wordCard}>
             
-            <span className={styles.wordTitle}>{wordCard.translate} </span> <img className={styles.imgWord} src = {wordCard.photo} alt ="print" />
+            <span className={styles.wordTitle}>{wordCard.russian} </span> 
             <button onClick={handleHideWordTranslate} className={styles.buttonWordTranslate}>Hide Translation</button>
             
           </div> 
-          : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.title}</span><br></br>
+          : <div className={styles.wordCard}><span className={styles.wordTitle}>{wordCard.english}</span><br></br>
         <button ref={ref} onClick={() => {handleWordTranslate(wordCard.id)}} className={styles.buttonWordTranslate}>Translation</button>
         </div>}
 
           <button onClick={onNextClick} className={styles.buttonList}>&#8594;</button>
      
          
-         <button className={styles.buttonAddWord}>Add word</button>
+         <button onClick = {handleAddWord} className={styles.buttonAddWord}>Add word</button>
           </div>
        
     )

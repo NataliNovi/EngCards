@@ -26,14 +26,11 @@ function Card (props)  {
   }
 
   if (props.isHideAllAnswers===true) {
-  console.log('hide all answers = true')
+  //console.log('hide all answers = true')
     if (isTranslateCard===true){
               setIsTranslateCard(!isTranslateCard)         
     }
   }
-  else 
-  console.log('hide all answers = false')
-
 
     return (
        
