@@ -1,6 +1,8 @@
 export const wordsArr = [
-    {title: "Red",
-    photo: "https://funart.pro/uploads/posts/2021-04/1618554563_39-funart_pro-p-oboi-fon-svetlo-krasnii-tsvet-40.jpg",
+  {
+    title: "Red",
+    photo:
+      "https://funart.pro/uploads/posts/2021-04/1618554563_39-funart_pro-p-oboi-fon-svetlo-krasnii-tsvet-40.jpg",
     mean: "color",
     transcript: "|red|",
     translate: "Красный",
@@ -8,9 +10,9 @@ export const wordsArr = [
     sample: "red dress",
     isActive: false,
     id: 1,
-
-    },
-    {title: "Blue",
+  },
+  {
+    title: "Blue",
     photo: "https://miro.medium.com/max/1280/0*xCXUvGbrpndOWTw5.jpg",
     mean: "color",
     transcript: " |bluː| ",
@@ -19,10 +21,11 @@ export const wordsArr = [
     sample: "blue hat",
     isActive: false,
     id: 2,
-
-    },
-    {title: "Yellow",
-    photo: "https://funart.pro/uploads/posts/2021-04/1618493424_5-funart_pro-p-oboi-fon-zheltii-tsvet-6.png",
+  },
+  {
+    title: "Yellow",
+    photo:
+      "https://funart.pro/uploads/posts/2021-04/1618493424_5-funart_pro-p-oboi-fon-zheltii-tsvet-6.png",
     mean: "color",
     transcript: "|ˈjeləʊ| ",
     translate: "Жёлтый",
@@ -30,10 +33,12 @@ export const wordsArr = [
     sample: "yellow shirt",
     isActive: false,
     id: 3,
-    },
+  },
 
-    {title: "Black",
-    photo: "https://bogatyr.club/uploads/posts/2021-11/thumbs/1636953181_5-bogatyr-club-p-glubokii-chernii-fon-5.jpg",
+  {
+    title: "Black",
+    photo:
+      "https://bogatyr.club/uploads/posts/2021-11/thumbs/1636953181_5-bogatyr-club-p-glubokii-chernii-fon-5.jpg",
     mean: "color",
     transcript: "|blæk| ",
     translate: "Чёрный",
@@ -41,9 +46,10 @@ export const wordsArr = [
     sample: "black coat",
     isActive: false,
     id: 4,
-    },
+  },
 
-    {title: "White",
+  {
+    title: "White",
     photo: "https://proza.ru/pics/2015/12/19/109.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
@@ -52,10 +58,12 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 5,
-    },
+  },
 
-    {title: "Orange",
-    photo: "https://htmlcolorcodes.com/assets/images/colors/neon-orange-color-solid-background-1920x1080.png",
+  {
+    title: "Orange",
+    photo:
+      "https://htmlcolorcodes.com/assets/images/colors/neon-orange-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Оранжевый",
@@ -63,9 +71,11 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 6,
-    },
-    {title: "Green",
-    photo: "https://pimmedia.egger.com/l/decor/U600_9/s/Detail/f/881x513/8812251283486",
+  },
+  {
+    title: "Green",
+    photo:
+      "https://pimmedia.egger.com/l/decor/U600_9/s/Detail/f/881x513/8812251283486",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Зелёный",
@@ -73,9 +83,11 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 7,
-    },
-    {title: "Gray",
-    photo: "https://pimmedia.egger.com/l/decor/U732_PG/s/Detail/f/881x513/8803437379614",
+  },
+  {
+    title: "Gray",
+    photo:
+      "https://pimmedia.egger.com/l/decor/U732_PG/s/Detail/f/881x513/8803437379614",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Серый",
@@ -83,9 +95,11 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 8,
-    },
-    {title: "Golden",
-    photo: "https://static.vecteezy.com/system/resources/thumbnails/009/827/838/small/wave-golden-abstract-background-illustration-free-vector.jpg",
+  },
+  {
+    title: "Golden",
+    photo:
+      "https://static.vecteezy.com/system/resources/thumbnails/009/827/838/small/wave-golden-abstract-background-illustration-free-vector.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Золотой",
@@ -93,10 +107,12 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 9,
-    },
+  },
 
-    {title: "Silver",
-    photo: "https://www.zastavki.com/pictures/originals/2015/Backgrounds_Silver_background_with_rays_102732_.jpg",
+  {
+    title: "Silver",
+    photo:
+      "https://www.zastavki.com/pictures/originals/2015/Backgrounds_Silver_background_with_rays_102732_.jpg",
     mean: "color",
     transcript: "|pɪŋk| ",
     translate: "Серебристый",
@@ -104,9 +120,10 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 10,
-    },
+  },
 
-    {title: "Ivory",
+  {
+    title: "Ivory",
     photo: "https://www.color-hex.com/palettes/26697.png",
     mean: "color",
     transcript: "|pɪŋk| ",
@@ -115,9 +132,11 @@ export const wordsArr = [
     sample: "pink car",
     isActive: false,
     id: 11,
-    },
-    {title: "Brown",
-    photo: "https://htmlcolorcodes.com/assets/images/colors/saddle-brown-color-solid-background-1920x1080.png",
+  },
+  {
+    title: "Brown",
+    photo:
+      "https://htmlcolorcodes.com/assets/images/colors/saddle-brown-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "",
     translate: "Коричневый",
@@ -125,9 +144,11 @@ export const wordsArr = [
     sample: "",
     isActive: false,
     id: 12,
-    },
-    {title: "Turquoise",
-    photo: "https://htmlcolorcodes.com/assets/images/colors/turquoise-color-solid-background-1920x1080.png",
+  },
+  {
+    title: "Turquoise",
+    photo:
+      "https://htmlcolorcodes.com/assets/images/colors/turquoise-color-solid-background-1920x1080.png",
     mean: "color",
     transcript: "",
     translate: "Бирюзовый",
@@ -135,10 +156,5 @@ export const wordsArr = [
     sample: "",
     isActive: false,
     id: 13,
-    },
-    
-    
-    
-    ]
-
- 
+  },
+];

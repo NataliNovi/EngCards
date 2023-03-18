@@ -2,7 +2,7 @@
 @import '../../assets/styles/variables.scss';
 
 .hideAnswer {
-  
+
   margin-top: 30px;
   background: var(--button-background-color);
   @include font-style-button-text;
@@ -11,22 +11,15 @@
   width: 16vw;
   -webkit-transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
-  }
+}
 
-  .hideAnswer:hover { 
-    -webkit-transform: translate(10px);
-    transform: translate(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) 
-    }
+.hideAnswer:hover {
+  -webkit-transform: translate(10px);
+  transform: translate(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
 
-  .cardTitle {
-    font-weight: 600;
-    margin-top: 10px;
-  }
-
-
-
- 
-
-
-
+.cardTitle {
+  font-weight: 600;
+  margin-top: 10px;
+}

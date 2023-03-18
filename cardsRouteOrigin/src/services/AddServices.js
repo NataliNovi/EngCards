@@ -1,19 +1,19 @@
-
 class AddServices {
-    static async addWords() {
-        try {
-            const resp = await fetch (`http://itgirlschool.justmakeit.ru/api/words/add`, {
-                method:"ADD"
-            })
-            
-            const data = await resp.json()
-            return data
-            }
+  static async addWords() {
+    try {
+      const resp = await fetch(
+        `http://itgirlschool.justmakeit.ru/api/words/add`,
+        {
+          method: "ADD",
+        }
+      );
 
-catch (e) {
-    console.error(e)
-}
-}
+      const data = await resp.json();
+      return data;
+    } catch (e) {
+      console.error(e);
+    }
+  }
 }
 
 export default AddServices;

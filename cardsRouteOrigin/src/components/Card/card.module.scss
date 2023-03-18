@@ -3,13 +3,13 @@
 
 
 .cardsContainer {
-display: grid;
-grid-template-columns: 25% 25% 25% 25%;
-grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
 
 }
 
-.cardImg  {
+.cardImg {
     height: 150px;
     min-width: auto;
     max-width: 90%;
@@ -38,7 +38,8 @@ grid-template-rows: auto;
     width: 100px;
     height: 100px;
     background: rgb(235, 236, 183);
-  }
-  .box.active {
+}
+
+.box.active {
     background: rgb(215, 237, 215);
-  }
+}

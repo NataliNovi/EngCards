@@ -1,148 +1,184 @@
-import React, {useState} from 'react'
-import './wordslist.scss'
-import {MyContext} from '..//context/MyContext';
-import { useContext } from 'react';
-import DelServices from '../services/DelServices';
+import React, { useState } from "react";
+import "./wordslist.scss";
+import { MyContext } from "..//context/MyContext";
+import { useContext } from "react";
+import DelServices from "../services/DelServices";
 
-
- function WordsList() {
-  const {valueContext, setValueContext} = useContext(MyContext);
-  console.log(valueContext)
-
+function WordsList() {
+  const { valueContext, setValueContext } = useContext(MyContext);
+  console.log(valueContext);
 
   async function handleDeleteWord(id) {
-    DelServices.delWords(id)
-    const copyContext = [...valueContext]
-    const copyContextDel = copyContext.filter(item => item.id !==id)
-    setValueContext(copyContextDel)
+    DelServices.delWords(id);
+    const copyContext = [...valueContext];
+    const copyContextDel = copyContext.filter((item) => item.id !== id);
+    setValueContext(copyContextDel);
   }
 
-  
-    const[isInputShow, setIsInputShow] = useState(false);
+  const [isInputShow, setIsInputShow] = useState(false);
 
-    async function handleChangeWord () {
-      setIsInputShow(!isInputShow)
-    }
-  
-    const handleCancelWordChange = () => {
-      setIsInputShow(!isInputShow)
-    }
-
-
-
-const [initialValue, setInitialValue] = useState({
-id: '',
-eng: '',
-transcript: '',
-translation: ''
-});  
-
-function onChangeValue(e) {
-  e.preventDefault();
-  const localInitialValue = {...initialValue};
-  localInitialValue[e.target.name] = e.target.value;
-  setInitialValue(localInitialValue)
-}
-
-function validateValue(value) {
-  if (value !== '') {
-    return value
+  async function handleChangeWord() {
+    setIsInputShow(!isInputShow);
   }
-  return false
-}
 
-const validateInputs = validateValue(initialValue.id) && validateValue(initialValue.eng)&& validateValue(initialValue.transcript) && validateValue(initialValue.translation);
+  const handleCancelWordChange = () => {
+    setIsInputShow(!isInputShow);
+  };
 
+  const [initialValue, setInitialValue] = useState({
+    id: "",
+    eng: "",
+    transcript: "",
+    translation: "",
+  });
 
-const [localInputValue, setLocalInputValue] = useState({
-  id: initialValue.id,
-  eng: initialValue.eng,
-  transcript: initialValue.transcript,
-  translation: initialValue.translation 
-})
+  function onChangeValue(e) {
+    e.preventDefault();
+    const localInitialValue = { ...initialValue };
+    localInitialValue[e.target.name] = e.target.value;
+    setInitialValue(localInitialValue);
+  }
 
-
-const handleSaveWordChange = (e) => {
-  e.preventDefault(e);
-  setIsInputShow(!isInputShow)
-
-
- 
-  //const regexEng = new RegExp(/^[a-zA-Z]*$/);
-  //const regexEng = new RegExp(/[a-zA-Z0-9]+/gu);
-  const regexEng = new RegExp(/^[A-Za-z\s]*$/);
-  
-  const checkEng = () => {
-    if (!regexEng.test(initialValue.eng)) {
-      alert("Error in english word");
-      setIsInputShow(isInputShow===false);
+  function validateValue(value) {
+    if (value !== "") {
+      return value;
     }
-    else console.log(initialValue.eng)
-   
-    }
+    return false;
+  }
+
+  const validateInputs =
+    validateValue(initialValue.id) &&
+    validateValue(initialValue.eng) &&
+    validateValue(initialValue.transcript) &&
+    validateValue(initialValue.translation);
+
+  const [localInputValue, setLocalInputValue] = useState({
+    id: initialValue.id,
+    eng: initialValue.eng,
+    transcript: initialValue.transcript,
+    translation: initialValue.translation,
+  });
+
+  const handleSaveWordChange = (e) => {
+    e.preventDefault(e);
+    setIsInputShow(!isInputShow);
+
+    //const regexEng = new RegExp(/^[a-zA-Z]*$/);
+    //const regexEng = new RegExp(/[a-zA-Z0-9]+/gu);
+    const regexEng = new RegExp(/^[A-Za-z\s]*$/);
+
+    const checkEng = () => {
+      if (!regexEng.test(initialValue.eng)) {
+        alert("Error in english word");
+        setIsInputShow(isInputShow === false);
+      } else console.log(initialValue.eng);
+    };
     checkEng();
 
+    const regexTransl = new RegExp(/^[a-яё]+(?:[ -][a-яё]+)*$/i);
 
-    const regexTransl = new RegExp(/^[a-яё]+(?:[ -][a-яё]+)*$/i)
-  
     const checkTransl = () => {
       if (!regexTransl.test(initialValue.translation)) {
         alert("Error in translation");
-      }
-      else console.log(initialValue.translation)
-     
-      }
-      checkTransl();
-   }
+      } else console.log(initialValue.translation);
+    };
+    checkTransl();
+  };
 
+  return (
+    <div className="wordsListTableContainer">
+      {isInputShow ? (
+        <div>
+          <form className="inputTable">
+            <input
+              className="idInput"
+              placeholder="id"
+              type="text"
+              onChange={onChangeValue}
+              name="id"
+              value={initialValue.id}
+              required
+            ></input>
+            <input
+              className="englishInput"
+              placeholder="english word"
+              type="text"
+              onChange={onChangeValue}
+              name="eng"
+              value={initialValue.eng}
+              required
+            ></input>
+            <input
+              className="transcriptionInput"
+              placeholder="transcript"
+              type="text"
+              onChange={onChangeValue}
+              name="transcript"
+              value={initialValue.transcript}
+              required
+            ></input>
+            <input
+              className="russianInput"
+              placeholder="translation"
+              type="text"
+              onChange={onChangeValue}
+              name="translation"
+              value={initialValue.translation}
+              required
+            ></input>
 
-
-    return (
-
-  
-          <div className='wordsListTableContainer'>
-             
-        {isInputShow
-             ?      <div >
-             <form className='inputTable'>
-             <input className='idInput' placeholder='id' type='text' onChange={onChangeValue} name="id" value={initialValue.id} required></input>
-             <input className='englishInput' placeholder='english word' type='text' onChange={onChangeValue} name="eng" value={initialValue.eng} required></input>
-             <input className='transcriptionInput' placeholder='transcript' type='text' onChange={onChangeValue} name="transcript" value={initialValue.transcript} required></input>
-             <input className='russianInput' placeholder='translation' type='text' onChange={onChangeValue} name="translation" value={initialValue.translation} required></input>
-     
-             <div className='tableButtons'>
-              <button className='listButton' type='submit' onClick={handleSaveWordChange} disabled={!validateInputs} >Save</button>
-              <button className='listButton' type='submit' onClick={handleCancelWordChange}>Cancel</button>
-              </div>
-             </form>
-           
-             </div> 
-
-            : <div className='wordsList'>
-               <div>
-              {valueContext.map((item, key)=>
-              (
-              <div className = "tableRow" key = {key}>
-                <span>{item.id}</span><span>{item.english}</span><span>{item.transcription}</span><span>{item.russian}</span><span>{item.tags}</span>
-                <button className='listButton' onClick={()=>{handleChangeWord(item.id)}}>Change</button>
-                <button className='listButton' onClick={()=>{handleDeleteWord(item.id)}}>Delete</button>
-               
-
-              </div>
-              ))}
+            <div className="tableButtons">
+              <button
+                className="listButton"
+                type="submit"
+                onClick={handleSaveWordChange}
+                disabled={!validateInputs}
+              >
+                Save
+              </button>
+              <button
+                className="listButton"
+                type="submit"
+                onClick={handleCancelWordChange}
+              >
+                Cancel
+              </button>
             </div>
-
-            </div>
-
-            }
-            </div>)}
-
-
+          </form>
+        </div>
+      ) : (
+        <div className="wordsList">
+          <div>
+            {valueContext.map((item, key) => (
+              <div className="tableRow" key={key}>
+                <span>{item.id}</span>
+                <span>{item.english}</span>
+                <span>{item.transcription}</span>
+                <span>{item.russian}</span>
+                <span>{item.tags}</span>
+                <button
+                  className="listButton"
+                  onClick={() => {
+                    handleChangeWord(item.id);
+                  }}
+                >
+                  Change
+                </button>
+                <button
+                  className="listButton"
+                  onClick={() => {
+                    handleDeleteWord(item.id);
+                  }}
+                >
+                  Delete
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default WordsList;
-
-
-
-
-
-    

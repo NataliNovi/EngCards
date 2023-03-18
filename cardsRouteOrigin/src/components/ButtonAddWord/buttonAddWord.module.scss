@@ -6,17 +6,17 @@
 .buttonAddWordContainer {
     width: 30vw;
     @include flex-column;
-    
+
     border: solid 2px black;
     height: 100px;
 }
 
 
 .buttonAddWord {
-   
-    background:var(--button-background-color);
-	color: var(--text-color);
-	box-shadow: inset 4px 2px 2px 3px var(--border-button);
+
+    background: var(--button-background-color);
+    color: var(--text-color);
+    box-shadow: inset 4px 2px 2px 3px var(--border-button);
     border: solid 3px var(--button-background-color);
 
     border-radius: var(--border-radius);
@@ -35,8 +35,9 @@
     color: var(--text-color);
     background: white;
     border: var(--border-button);
-	
+
     -webkit-transform: translate(10px);
     transform: translate(10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+        /* Изменяем тень */
 }

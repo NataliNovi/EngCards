@@ -12,9 +12,8 @@
     transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-
-.transButton:hover { 
+.transButton:hover {
     -webkit-transform: translate(10px);
     transform: translate(5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) /* Изменяем тень */
-    }
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)
+}
