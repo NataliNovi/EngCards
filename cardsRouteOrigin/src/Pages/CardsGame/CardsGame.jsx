@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Card from "../components/Card/Card";
-import ButtonAddCard from "../components/ButtonAddCard/ButtonAddCard";
-import { cardsArr } from "..//data/cardsDataArr";
+import Card from "../../components/Card/Card";
+import ButtonAddCard from "../../components/ButtonAddCard/ButtonAddCard";
+import { cardsArr } from "../../data/cardsDataArr";
 import styles from "./cardsgame.module.scss";
 
 const CardsGame = () => {

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./wordsgame.module.scss";
-import Learned from "../components/Learned/Learned";
-import { MyContext } from "..//context/MyContext";
+import Learned from "../../components/Learned/Learned";
+import { MyContext } from "../../context/MyContext";
 import { useContext } from "react";
-import AddServices from "../services/AddServices";
+import AddServices from "../../services/AddServices";
 
 export default function WordsGame() {
   const { valueContext, setValueContext } = useContext(MyContext);

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./wordslist.scss";
-import { MyContext } from "..//context/MyContext";
+import { MyContext } from "..//..//context/MyContext";
 import { useContext } from "react";
-import DelServices from "../services/DelServices";
+import DelServices from "../..//services/DelServices";
 
 function WordsList() {
   const { valueContext, setValueContext } = useContext(MyContext);

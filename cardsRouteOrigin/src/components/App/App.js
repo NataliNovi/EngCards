@@ -11,7 +11,11 @@ import {
 import "../Word/Word.jsx";
 import Footer from "../Footer/Footer";
 import logo from "../../assets/photo/logoBoy.jpeg";
-import { Home, WordsList, CardsGame, WordsGame, Error } from "..//../pages";
+import Home from "..//../pages/Home/Home";
+import WordsList from "..//..//pages/WordsList/WordsList";
+import CardsGame from "..//..//pages/CardsGame/CardsGame";
+import WordsGame from "..//..//pages/WordsGame/WordsGame";
+import Error from "..//..//pages/Error/Error";
 
 function App() {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home.module.scss";
-import photo from "..//assets/photo/mainPhoto.avif";
+import photo from "..//..//assets/photo/mainPhoto.avif";
 
 export default function Home() {
   return (
