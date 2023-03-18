@@ -4,7 +4,6 @@ import Learned from "../components/Learned/Learned";
 import { MyContext } from "..//context/MyContext";
 import { useContext } from "react";
 import AddServices from "../services/AddServices";
-//import { wordsArr } from '../data/wordsDataArr';
 
 export default function WordsGame() {
   const { valueContext, setValueContext } = useContext(MyContext);
@@ -15,12 +14,10 @@ export default function WordsGame() {
     ref.current.focus();
   }, []);
 
-  let wordDescribe = valueContext;
-
   const [isTranslateWord, setIsTranslateWord] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [countLearnedWords, setCountLearnedWords] = useState(0);
-  let wordCard = wordDescribe[currentIndex];
+  let wordCard = valueContext[currentIndex];
   console.log(wordCard.english);
   console.log(wordCard.russian);
 
@@ -45,14 +42,14 @@ export default function WordsGame() {
   const onNextClick = () => {
     setIsTranslateWord(isTranslateWord === "");
     let nextIndex = currentIndex + 1;
-    if (nextIndex === wordDescribe.length) {
+    if (nextIndex === valueContext.length) {
       // nextIndex = 0;
       return "well done";
     }
     setCurrentIndex(nextIndex);
   };
 
-  async function handleAddWord() {
+  function handleAddWord() {
     console.log("add");
     AddServices.addWords();
     const copyContext = [...valueContext];

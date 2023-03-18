@@ -1,0 +1,18 @@
+.wordImg {
+  height: 150px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.word {
+  color: var(--text-color);
+  border: double 2px gray;
+  margin-top: 30px;
+  width: 20vw;
+  height: 20em;
+  text-align: center;
+  font-family: "Arial";
+  font-size: 1.2em;
+  font-weight: regular;
+  padding-bottom: 10px;
+}/*# sourceMappingURL=word.module.css.map */

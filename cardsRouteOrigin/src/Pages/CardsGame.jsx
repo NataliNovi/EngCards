@@ -1,15 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import Card from "../components/Card/Card";
 import ButtonAddCard from "../components/ButtonAddCard/ButtonAddCard";
 import { cardsArr } from "..//data/cardsDataArr";
 import styles from "./cardsgame.module.scss";
 
-//export default function CardsGame() {
-
-const CardsGame = (props) => {
-  //const ref = useRef();
-
-  const [isHideAllAnswers, setIsHideAllAnswers] = React.useState(false);
+const CardsGame = () => {
+  const [isHideAllAnswers, setIsHideAllAnswers] = useState(false);
   const cardDescribe = cardsArr;
 
   const handleHideAllAnswers = () => {
@@ -40,7 +36,7 @@ const CardsGame = (props) => {
       <div className={styles.cardsContainer}>
         {cardDescribe.map((card) => (
           <Card
-            key={card.transcript}
+            key={card.id}
             title={card.title}
             photo={card.photo}
             mean={card.mean}

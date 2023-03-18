@@ -1,0 +1,89 @@
+.wordsListTableContainer {
+  margin-top: 50px;
+  background-color: rgb(12, 77, 180);
+}
+
+.inputTable {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: var(--border-table-list);
+  background-color: var(--customer-green);
+  margin-top: 50px;
+}
+
+.idInput,
+.englishInput,
+.transcriptionInput,
+.russianInput,
+.tableButtons {
+  width: 19%;
+  border-radius: 6px;
+  font-family: "Arial";
+  font-size: 1.2em;
+  font-weight: regular;
+}
+
+.idInput:invalid {
+  border-color: red;
+}
+
+.englishInput:invalid {
+  border-color: red;
+}
+
+.transcriptionInput:invalid {
+  border-color: red;
+}
+
+.russianInput:invalid {
+  border-color: red;
+}
+
+.idInput:valid {
+  border: var(--border-table-list);
+}
+
+.englishInput:valid {
+  border: var(--border-table-list);
+}
+
+.transcriptionInput:valid {
+  border: var(--border-table-list);
+}
+
+.russianInput:valid {
+  border: var(--border-table-list);
+}
+
+.tableButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listButton {
+  background: var(--button-background-color);
+  font-family: "Arial";
+  font-size: 1.2em;
+  font-weight: regular;
+  border: var(--border-button);
+  border-radius: 6px;
+}
+
+.tableRow {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: var(--customer-green);
+  padding-left: 20px;
+  height: 30px;
+  border: var(--border-table-list);
+  font-size: 1.1rem;
+  font-family: "Arial";
+  font-size: 1.2em;
+  font-weight: regular;
+}/*# sourceMappingURL=wordslist.css.map */

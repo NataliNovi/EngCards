@@ -1,0 +1,15 @@
+.transButton {
+  margin-top: 30px;
+  background: var(--button-background-color);
+  font-family: "Arial";
+  font-size: 1.1em;
+  font-weight: regular;
+  border: var(--border-button);
+  width: 60%;
+  transition: all 2.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.transButton:hover {
+  transform: translate(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=wordtransbutton.module.css.map */

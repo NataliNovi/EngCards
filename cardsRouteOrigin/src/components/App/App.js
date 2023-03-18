@@ -1,6 +1,5 @@
-// import styles from './App.module.scss';
 import "./App.css";
-import React, { useState } from "react";
+import React from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -12,7 +11,7 @@ import {
 import "../Word/Word.jsx";
 import Footer from "../Footer/Footer";
 import logo from "../../assets/photo/logoBoy.jpeg";
-import { Home, WordsList, CardsGame, WordsGame, Error } from "../../Pages";
+import { Home, WordsList, CardsGame, WordsGame, Error } from "..//../pages";
 
 function App() {
   return (

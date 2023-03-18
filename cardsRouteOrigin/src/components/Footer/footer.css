@@ -1,0 +1,24 @@
+.footer {
+  display: flex;
+  width: 100vw;
+  background: var(--customer-blue);
+  color: aliceblue;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px;
+  height: 80px;
+  text-align: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+}
+.footer__item_footer-home, .footer__item_footer-wordslist, .footer__item_footer-wordsgame, .footer__item_footer-flashcards {
+  font-size: 1.5em;
+  background-color: rgb(255, 200, 0);
+  width: 15vw;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(8, 43, 173);
+}/*# sourceMappingURL=footer.css.map */
